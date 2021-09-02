@@ -1,0 +1,30 @@
+ProjectTitle: DrJaiswal
+
+PageList:
+- file: index.html
+  titleName: Home
+  ready: 1
+- file: about.html
+  titleName: About
+  ready: 1
+- file: me.html
+  titleName: Me
+  ready: 1
+- file: face-procedeures.html
+  titleName: Face Procedeures
+  ready: 1
+- file: breast-procedures.html
+  titleName: Breast Procedures
+  ready: 1
+- file: body-procedures.html
+  titleName: Body Procedures
+  ready: 1
+- file: gallery.html
+  titleName: Gallery
+  ready: 1
+- file: resources.html
+  titleName: Resources
+  ready: 1
+- file: contact.html
+  titleName: Contact
+  ready: 1
