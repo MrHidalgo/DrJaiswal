@@ -1,0 +1,13 @@
+---
+title: DrJaiswal | About
+
+pageClassName: p-about
+
+headerLogo: true
+---
+extends shared/_layout
+
+block content
+  div.body(class!= pageClassName)
+
+    +mainSection('about', 'img-about-main-bg.jpg', 'ABOUT ATELIER', ['HOME', '|', 'ABOUT'])

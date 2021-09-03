@@ -1,0 +1,49 @@
+// HEADER :: START
+
+.header {
+	z-index: 999;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+
+	&.header--logo {
+		.header {
+			&__wrapper {
+				padding-top: 25px;
+				padding-bottom: 25px;
+			}
+		}
+	}
+
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding-top: 55px;
+		padding-bottom: 55px;
+
+		&-right {
+			display: flex;
+			align-items: center;
+		}
+	}
+
+	&__address {
+		font-weight: bold;
+		font-size: 16px;
+		letter-spacing: 0.02em;
+		color: #fff;
+	}
+
+	&__request {
+		display: flex;
+		margin-right: 40px;
+		font-weight: bold;
+		font-size: 16px;
+		letter-spacing: 0.02em;
+		color: #fff;
+	}
+}
+
+// HEADER :: END

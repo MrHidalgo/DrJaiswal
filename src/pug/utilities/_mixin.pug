@@ -12,4 +12,21 @@ include ./_mixin/_modal
 include ./_mixin/_nav
 include ./_mixin/_form
 
+mixin mainSection(classMod, img, title, breadcrumbsArr)
+	main#main.main(class!="main--" + classMod)
+		.main__bg
+			img(src!="img/" + img alt="")
+		.main__wrapper
+			if(classMod === 'home')
+				img(src="img/logo.svg" alt="")
+			else
+				.main__content
+					h1.main__title!= title
+					.main__breadcrumbs
+						each val, idx in breadcrumbsArr
+							if(idx === breadcrumbsArr.length - 1)
+								p!= val
+							else
+								a(href="#")!= val
+
 //- MIXIN :: END

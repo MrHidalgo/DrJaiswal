@@ -2,8 +2,12 @@
 title: DrJaiswal
 
 pageClassName: p-home
+
+headerLogo: false
 ---
 extends shared/_layout
 
 block content
   div.body(class!= pageClassName)
+
+    +mainSection('home', 'img-home-main-bg.jpg')
