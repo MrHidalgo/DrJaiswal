@@ -12,6 +12,14 @@
 		}
 	}
 
+	&.logo--footer {
+		.logo__btn {
+			img {
+				max-width: 187px;
+			}
+		}
+	}
+
 	&__btn {
 		display: flex;
 		align-items: flex-start;
