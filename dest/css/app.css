@@ -13,7 +13,7 @@
 }
 
 /* line 25, src/scss/_utilities/_extend.scss */
-.main__title {
+.c-title, .main__title {
   font-family: 'worthington-arcade', serif;
   font-weight: 400;
   font-style: normal;
@@ -450,6 +450,73 @@ picture {
   height: auto;
 }
 
+/* line 3, src/scss/_macros/_title.scss */
+.c-title {
+  font-weight: normal;
+  letter-spacing: 0.02em;
+  color: #c39d48;
+}
+
+/* line 3, src/scss/_macros/_label.scss */
+.c-label {
+  padding-bottom: 10px;
+  font-weight: 900;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000;
+}
+
+/* line 3, src/scss/_macros/desc.scss */
+.c-desc {
+  font-weight: normal;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  line-height: 38px;
+  color: #000;
+}
+
+/* line 3, src/scss/_macros/_btn.scss */
+.c-btn {
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: auto;
+}
+
+/* line 12, src/scss/_macros/_btn.scss */
+.c-btn__wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* line 16, src/scss/_macros/_btn.scss */
+.c-btn__wrapper--center {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 /* line 3, src/scss/_components/common/_header.scss */
 .header {
   z-index: 999;
@@ -819,6 +886,70 @@ picture {
 /* line 76, src/scss/_components/common/main.scss */
 .main__breadcrumbs p {
   color: #c39d48;
+}
+
+/* line 3, src/scss/_components/common/practice.scss */
+.practice {
+  padding-top: 130px;
+  padding-bottom: 165px;
+  background-image: url("../img/img-pattern-practice.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+          background-size: cover;
+}
+
+/* line 15, src/scss/_components/common/practice.scss */
+.practice__title {
+  padding-bottom: 60px;
+  text-align: center;
+  font-size: 60px;
+}
+
+/* line 21, src/scss/_components/common/practice.scss */
+.practice__desc {
+  padding-bottom: 70px;
+  width: 100%;
+  max-width: 724px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/* line 30, src/scss/_components/common/practice.scss */
+.practice__link {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 30px;
+}
+
+/* line 36, src/scss/_components/common/practice.scss */
+.practice__link-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* line 40, src/scss/_components/common/practice.scss */
+.practice__link-wrapper > div {
+  width: 100%;
+  max-width: -webkit-calc(100% / 3);
+  max-width: calc(100% / 3);
 }
 
 /*# sourceMappingURL=maps/app.css.map */

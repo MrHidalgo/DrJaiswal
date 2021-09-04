@@ -1,0 +1,48 @@
+// SECTION :: START
+
+.practice {
+	padding-top: 130px;
+	padding-bottom: 165px;
+	background-image: url('../img/img-pattern-practice.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
+	&__wrapper {
+
+	}
+
+	&__title {
+		padding-bottom: 60px;
+		text-align: center;
+		font-size: 60px;
+	}
+
+	&__desc {
+		padding-bottom: 70px;
+		width: 100%;
+		max-width: 724px;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+	}
+
+	&__link {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 30px;
+
+		&-wrapper {
+			display: flex;
+			align-items: center;
+
+			> div {
+				width: 100%;
+				max-width: calc(100% / 3);
+			}
+		}
+	}
+}
+
+// SECTION :: END

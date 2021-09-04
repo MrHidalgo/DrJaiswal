@@ -1,10 +1,11 @@
 // TITLE :: START
 
-.c-title {
-	@extend %fontWorthington;
+.c-desc {
 	font-weight: normal;
+	font-size: 16px;
 	letter-spacing: 0.02em;
-	color: #c39d48;
+	line-height: 38px;
+	color: #000;
 }
 
 // TITLE :: END
