@@ -1,0 +1,17 @@
+---
+title: DrJaiswal | Contact Us
+
+pageClassName: p-contact
+
+headerLogo: false
+---
+extends shared/_layout
+
+block content
+  div.body(class!= pageClassName)
+
+    +mainSection('contact', 'img-contact-main-bg.jpg', 'CONTACT US', ['HOME', '|', 'CONTACT US'])
+
+    section.contactPage
+
+      include components/contact/contact

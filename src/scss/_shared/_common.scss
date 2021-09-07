@@ -1,7 +1,8 @@
 // COMMON :: START
 
 .galleryPage,
-.resourcesPage {
+.resourcesPage,
+.contactPage {
 	background-image: url('../img/img-pattern-gallerypage.png');
 	background-repeat: no-repeat;
 	background-position: center;
@@ -10,6 +11,10 @@
 
 .resourcesPage {
 	padding-bottom: 200px;
+}
+
+.contactPage {
+	padding-bottom: 50px;
 }
 
 // COMMON :: END

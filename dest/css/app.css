@@ -417,7 +417,8 @@ picture {
 
 /* line 3, src/scss/_shared/_common.scss */
 .galleryPage,
-.resourcesPage {
+.resourcesPage,
+.contactPage {
   background-image: url("../img/img-pattern-gallerypage.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -425,9 +426,14 @@ picture {
           background-size: cover;
 }
 
-/* line 11, src/scss/_shared/_common.scss */
+/* line 12, src/scss/_shared/_common.scss */
 .resourcesPage {
   padding-bottom: 200px;
+}
+
+/* line 16, src/scss/_shared/_common.scss */
+.contactPage {
+  padding-bottom: 50px;
 }
 
 /* line 1, src/scss/_shared/_iconFont.scss */
@@ -1311,6 +1317,298 @@ picture {
   font-size: 30px;
   line-height: 30px;
   text-align: center;
+}
+
+/* line 3, src/scss/_components/contact/contact.scss */
+.contact {
+  padding-top: 135px;
+}
+
+/* line 6, src/scss/_components/contact/contact.scss */
+.contact__title {
+  padding-bottom: 40px;
+  font-size: 60px;
+  line-height: 60px;
+  text-align: center;
+}
+
+/* line 13, src/scss/_components/contact/contact.scss */
+.contact__desc {
+  width: 100%;
+  max-width: 930px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 130px;
+  text-align: center;
+}
+
+/* line 22, src/scss/_components/contact/contact.scss */
+.contact__form {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  max-width: 1364px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 100px;
+}
+
+/* line 31, src/scss/_components/contact/contact.scss */
+.contact__form-group {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+/* line 36, src/scss/_components/contact/contact.scss */
+.contact__form-group > div {
+  width: 100%;
+  max-width: -webkit-calc((100% - 16px) / 2);
+  max-width: calc((100% - 16px) / 2);
+}
+
+/* line 42, src/scss/_components/contact/contact.scss */
+.contact__form-field {
+  position: relative;
+  padding-bottom: 25px;
+}
+
+/* line 46, src/scss/_components/contact/contact.scss */
+.contact__form-field--btn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 35px;
+}
+
+/* line 53, src/scss/_components/contact/contact.scss */
+.contact__form-field label {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+/* line 58, src/scss/_components/contact/contact.scss */
+.contact__form-field input,
+.contact__form-field select,
+.contact__form-field textarea {
+  outline: none;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 75px;
+  padding: 0 30px;
+  border: 2px solid #c39d48;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-border-radius: 0;
+          border-radius: 0;
+  background-color: #fff;
+  font-weight: bold;
+  font-size: 21px;
+  color: #000;
+}
+
+/* line 88, src/scss/_utilities/_mixin.scss */
+.contact__form-field input.placeholder,
+.contact__form-field select.placeholder,
+.contact__form-field textarea.placeholder {
+  font-weight: bold;
+  font-size: 21px;
+  color: #adadad;
+}
+
+/* line 89, src/scss/_utilities/_mixin.scss */
+.contact__form-field input:-moz-placeholder,
+.contact__form-field select:-moz-placeholder,
+.contact__form-field textarea:-moz-placeholder {
+  font-weight: bold;
+  font-size: 21px;
+  color: #adadad;
+}
+
+/* line 90, src/scss/_utilities/_mixin.scss */
+.contact__form-field input::-moz-placeholder,
+.contact__form-field select::-moz-placeholder,
+.contact__form-field textarea::-moz-placeholder {
+  font-weight: bold;
+  font-size: 21px;
+  color: #adadad;
+}
+
+/* line 91, src/scss/_utilities/_mixin.scss */
+.contact__form-field input:-ms-input-placeholder,
+.contact__form-field select:-ms-input-placeholder,
+.contact__form-field textarea:-ms-input-placeholder {
+  font-weight: bold;
+  font-size: 21px;
+  color: #adadad;
+}
+
+/* line 92, src/scss/_utilities/_mixin.scss */
+.contact__form-field input::-webkit-input-placeholder,
+.contact__form-field select::-webkit-input-placeholder,
+.contact__form-field textarea::-webkit-input-placeholder {
+  font-weight: bold;
+  font-size: 21px;
+  color: #adadad;
+}
+
+/* line 81, src/scss/_components/contact/contact.scss */
+.contact__form-field textarea {
+  height: 250px;
+  padding: 30px;
+}
+
+/* line 86, src/scss/_components/contact/contact.scss */
+.contact__form-field button {
+  outline: none;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: auto;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-border-radius: 0;
+          border-radius: 0;
+  background-color: transparent;
+}
+
+/* line 100, src/scss/_components/contact/contact.scss */
+.contact__form-field button span {
+  padding-bottom: 20px;
+  font-weight: 900;
+  font-size: 18px;
+  letter-spacing: 0.02em;
+  color: #000;
+}
+
+/* line 108, src/scss/_components/contact/contact.scss */
+.contact__form-field button i {
+  width: 99px;
+  height: 2px;
+  background-color: #c39d48;
+}
+
+/* line 118, src/scss/_components/contact/contact.scss */
+.contact__img img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 127, src/scss/_components/contact/contact.scss */
+.contact__block {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 100%;
+  max-width: 1088px;
+  min-height: 261px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 45px 60px;
+  border: 10px solid #fff;
+  background-color: #000000;
+}
+
+/* line 140, src/scss/_components/contact/contact.scss */
+.contact__block-title {
+  padding-bottom: 30px;
+  line-height: 60px;
+  font-size: 60px;
+}
+
+/* line 146, src/scss/_components/contact/contact.scss */
+.contact__block-header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+/* line 151, src/scss/_components/contact/contact.scss */
+.contact__block-desc {
+  font-size: 20px;
+  line-height: 30px;
+  color: #fff;
+}
+
+/* line 157, src/scss/_components/contact/contact.scss */
+.contact__block-link {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 20px;
+  font-weight: 900;
+  font-size: 18px;
+  letter-spacing: 0.02em;
+  line-height: 38px;
+  color: #fff;
+}
+
+/* line 167, src/scss/_components/contact/contact.scss */
+.contact__block-line {
+  width: 99px;
+  height: 2px;
+  background-color: #c39d48;
 }
 
 /*# sourceMappingURL=maps/app.css.map */

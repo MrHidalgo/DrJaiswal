@@ -21,10 +21,10 @@ PageList:
   ready: 1
 - file: gallery.html
   titleName: Gallery
-  ready: 1
+  ready: 55
 - file: resources.html
   titleName: Resources
-  ready: 1
+  ready: 55
 - file: contact.html
   titleName: Contact
   ready: 1
