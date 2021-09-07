@@ -1,0 +1,19 @@
+---
+title: DrJaiswal | Gallery
+
+pageClassName: p-gallery
+
+headerLogo: false
+---
+extends shared/_layout
+
+block content
+  div.body(class!= pageClassName)
+
+    +mainSection('gallery', 'img-home-main-bg.jpg', 'GALLERY', ['HOME', '|', 'GALLERY'])
+
+    section.galleryPage
+      include components/gallery/imagine
+
+    include components/common/schedule
+    include components/common/practice

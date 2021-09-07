@@ -1,0 +1,51 @@
+// SECTION :: START
+
+.imagine {
+	padding-top: 150px;
+	padding-bottom: 150px;
+
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		max-width: 1920px;
+		margin-left: auto;
+		margin-right: auto;
+
+		&-left,
+		&-right {
+			img {
+				display: block;
+				max-width: 100%;
+				height: auto;
+				max-height: 100%;
+				border: 5px solid #fff;
+				filter: drop-shadow(15px 15px 45px rgba(0, 0, 0, 0.1));
+			}
+		}
+
+		&-middle {
+			flex: 1;
+			min-width: 1px;
+			max-width: 100%;
+			padding-left: 50px;
+			padding-right: 50px;
+		}
+	}
+
+	&__title {
+		padding-bottom: 60px;
+		text-align: center;
+		font-size: 80px;
+	}
+
+	&__desc {
+		width: 100%;
+		max-width: 812px;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+	}
+}
+
+// SECTION :: END
