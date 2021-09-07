@@ -1,0 +1,59 @@
+// SECTION :: START
+
+.beforeAfter {
+	&__wrapper {
+		padding-bottom: 200px;
+	}
+
+	&__heading {
+		display: flex;
+		flex-direction: column;
+		padding-bottom: 55px;
+	}
+
+	&__label {
+		text-align: left;
+	}
+
+	&__title {
+		font-size: 90px;
+		line-height: 90px;
+	}
+
+	&__slider {
+		.swiper {
+			&-slide {
+				position: relative;
+				width: 535px !important;
+
+				img {
+					display: block;
+					max-width: 100%;
+					height: auto;
+					max-height: 100%;
+				}
+
+				p {
+					z-index: 5;
+					position: absolute;
+					left: 57px;
+					bottom: 57px;
+					font-size: 40px;
+				}
+
+				&:after {
+					content: '';
+					z-index: 0;
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					background-color: rgba(#000, 0.5);
+				}
+			}
+		}
+	}
+}
+
+// SECTION :: END

@@ -1053,4 +1053,69 @@ picture {
   text-align: center;
 }
 
+/* line 4, src/scss/_components/gallery/beforeAfter.scss */
+.beforeAfter__wrapper {
+  padding-bottom: 200px;
+}
+
+/* line 8, src/scss/_components/gallery/beforeAfter.scss */
+.beforeAfter__heading {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-bottom: 55px;
+}
+
+/* line 14, src/scss/_components/gallery/beforeAfter.scss */
+.beforeAfter__label {
+  text-align: left;
+}
+
+/* line 18, src/scss/_components/gallery/beforeAfter.scss */
+.beforeAfter__title {
+  font-size: 90px;
+  line-height: 90px;
+}
+
+/* line 25, src/scss/_components/gallery/beforeAfter.scss */
+.beforeAfter__slider .swiper-slide {
+  position: relative;
+  width: 535px !important;
+}
+
+/* line 29, src/scss/_components/gallery/beforeAfter.scss */
+.beforeAfter__slider .swiper-slide img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+}
+
+/* line 36, src/scss/_components/gallery/beforeAfter.scss */
+.beforeAfter__slider .swiper-slide p {
+  z-index: 5;
+  position: absolute;
+  left: 57px;
+  bottom: 57px;
+  font-size: 40px;
+}
+
+/* line 44, src/scss/_components/gallery/beforeAfter.scss */
+.beforeAfter__slider .swiper-slide:after {
+  content: '';
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 /*# sourceMappingURL=maps/app.css.map */
