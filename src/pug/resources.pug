@@ -1,0 +1,19 @@
+---
+title: DrJaiswal | Resources
+
+pageClassName: p-resources
+
+headerLogo: false
+---
+extends shared/_layout
+
+block content
+  div.body(class!= pageClassName)
+
+    +mainSection('resources', 'img-resources-main-bg.jpg', 'RESOURCES', ['HOME', '|', 'RESOURCES'])
+
+    section.resourcesPage
+
+      include components/resources/resources
+
+      include components/common/schedule

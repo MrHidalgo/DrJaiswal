@@ -30,8 +30,17 @@
 	@if $filename == facebook {
 		$char: "\E001";
 	}
-	@if $filename == instagram {
+	@if $filename == google {
 		$char: "\E002";
+	}
+	@if $filename == instagram {
+		$char: "\E003";
+	}
+	@if $filename == realself {
+		$char: "\E004";
+	}
+	@if $filename == yelp {
+		$char: "\E005";
 	}
 
 	@return $char;
@@ -52,7 +61,19 @@
 	@include icon(facebook);
 
 }
+.icon-google {
+	@include icon(google);
+
+}
 .icon-instagram {
 	@include icon(instagram);
+
+}
+.icon-realself {
+	@include icon(realself);
+
+}
+.icon-yelp {
+	@include icon(yelp);
 
 }
