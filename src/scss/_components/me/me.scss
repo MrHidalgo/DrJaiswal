@@ -1,0 +1,66 @@
+// SECTION :: START
+
+.me {
+	padding-top: 75px;
+	padding-bottom: 75px;
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+
+		&-1 {
+			padding-bottom: 150px;
+
+			.me__wrapper {
+				&-left,
+				&-right {
+					flex: 1;
+					min-width: 1px;
+					max-width: 100%;
+					padding-top: 20px;
+				}
+
+				&-middle {
+					flex: 100%;
+					max-width: 575px;
+				}
+			}
+		}
+
+		&-2 {
+			align-items: center;
+		}
+
+		&-middle {
+			padding-left: 85px;
+			padding-right: 85px;
+		}
+	}
+
+	&__logo {
+		img {
+			display: block;
+			width: 123px;
+			height: auto;
+		}
+	}
+
+	&__desc {
+		&:not(:last-of-type) {
+			padding-bottom: 50px;
+		}
+	}
+
+	&__media {
+		img {
+			display: block;
+			max-width: 100%;
+			height: auto;
+			max-height: 100%;
+			border: 5px solid #fff;
+			filter: drop-shadow(15px 15px 45px rgba(0, 0, 0, 0.1));
+		}
+	}
+}
+
+// SECTION :: END
