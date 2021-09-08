@@ -1019,6 +1019,132 @@ picture {
   max-width: calc(100% / 3);
 }
 
+/* line 3, src/scss/_components/common/media.scss */
+.media {
+  padding-top: 75px;
+  padding-bottom: 140px;
+}
+
+/* line 7, src/scss/_components/common/media.scss */
+.media__label {
+  text-align: left;
+}
+
+/* line 11, src/scss/_components/common/media.scss */
+.media__title {
+  padding-bottom: 40px;
+  font-size: 90px;
+  line-height: 90px;
+}
+
+/* line 17, src/scss/_components/common/media.scss */
+.media__link {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+/* line 21, src/scss/_components/common/media.scss */
+.media__link a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 20px;
+  font-weight: 900;
+  font-size: 18px;
+  letter-spacing: 0.02em;
+  color: #000;
+}
+
+/* line 30, src/scss/_components/common/media.scss */
+.media__link hr {
+  width: 99px;
+  height: 2px;
+  padding: 0;
+  margin: 0;
+  background-color: #bd9e56;
+}
+
+/* line 39, src/scss/_components/common/media.scss */
+.media__box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+/* line 43, src/scss/_components/common/media.scss */
+.media__box-wrapper {
+  position: relative;
+  left: -16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  width: -webkit-calc(100% + 16px);
+  width: calc(100% + 16px);
+  padding-bottom: 95px;
+}
+
+/* line 51, src/scss/_components/common/media.scss */
+.media__box-wrapper > div {
+  width: 100%;
+  max-width: -webkit-calc(100% / 6);
+  max-width: calc(100% / 6);
+  padding-left: 16px;
+  padding-bottom: 16px;
+}
+
+/* line 57, src/scss/_components/common/media.scss */
+.media__box-wrapper > div:nth-of-type(1) {
+  padding-top: 100px;
+}
+
+/* line 60, src/scss/_components/common/media.scss */
+.media__box-wrapper > div:nth-of-type(2) {
+  padding-top: 50px;
+}
+
+/* line 63, src/scss/_components/common/media.scss */
+.media__box-wrapper > div:nth-of-type(4) {
+  padding-top: 50px;
+}
+
+/* line 66, src/scss/_components/common/media.scss */
+.media__box-wrapper > div:nth-of-type(5) {
+  padding-top: 100px;
+}
+
+/* line 69, src/scss/_components/common/media.scss */
+.media__box-wrapper > div:nth-of-type(6) {
+  padding-top: 50px;
+}
+
+/* line 75, src/scss/_components/common/media.scss */
+.media__box img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+  border: 5px solid #fff;
+  -webkit-filter: drop-shadow(15px 15px 45px rgba(0, 0, 0, 0.1));
+          filter: drop-shadow(15px 15px 45px rgba(0, 0, 0, 0.1));
+}
+
 /* line 3, src/scss/_components/gallery/imagine.scss */
 .imagine {
   padding-top: 150px;
