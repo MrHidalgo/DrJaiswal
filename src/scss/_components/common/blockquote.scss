@@ -1,0 +1,59 @@
+// SECTION :: START
+
+.blockquote {
+	padding-top: 75px;
+	padding-bottom: 75px;
+
+	&__logo {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding-bottom: 40px;
+
+		img {
+			display: block;
+			max-width: 100%;
+			height: auto;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+	&__title {
+		position: relative;
+		width: 100%;
+		max-width: 1364px;
+		margin-left: auto;
+		margin-right: auto;
+		padding-bottom: 50px;
+
+		h2 {
+			font-size: 20px;
+			line-height: 50px;
+			text-align: center;
+			color: #000000;
+		}
+
+		.icon-font {
+			position: absolute;
+			top: -10px;
+			color: rgba(#C39D48, 0.25);
+			font-size: 74px;
+
+			&:first-of-type {
+				left: 0;
+			}
+			&:last-of-type {
+				right: 0;
+				transform: scale(-1);
+			}
+		}
+	}
+
+	&__subtitle {
+		text-align: center;
+		font-size: 20px;
+	}
+}
+
+// SECTION :: END

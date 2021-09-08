@@ -36,11 +36,14 @@
 	@if $filename == instagram {
 		$char: "\E003";
 	}
-	@if $filename == realself {
+	@if $filename == quote {
 		$char: "\E004";
 	}
-	@if $filename == yelp {
+	@if $filename == realself {
 		$char: "\E005";
+	}
+	@if $filename == yelp {
+		$char: "\E006";
 	}
 
 	@return $char;
@@ -67,6 +70,10 @@
 }
 .icon-instagram {
 	@include icon(instagram);
+
+}
+.icon-quote {
+	@include icon(quote);
 
 }
 .icon-realself {
