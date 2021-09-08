@@ -427,11 +427,20 @@ picture {
 }
 
 /* line 12, src/scss/_shared/_common.scss */
+.mePage {
+  background-image: url("../img/img-pattern-mepage.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+          background-size: cover;
+}
+
+/* line 19, src/scss/_shared/_common.scss */
 .resourcesPage {
   padding-bottom: 200px;
 }
 
-/* line 16, src/scss/_shared/_common.scss */
+/* line 23, src/scss/_shared/_common.scss */
 .contactPage {
   padding-bottom: 50px;
 }
@@ -1017,6 +1026,227 @@ picture {
   width: 100%;
   max-width: -webkit-calc(100% / 3);
   max-width: calc(100% / 3);
+}
+
+/* line 3, src/scss/_components/common/our.scss */
+.our {
+  position: relative;
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+
+/* line 8, src/scss/_components/common/our.scss */
+.our__bg {
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 50%;
+  height: 100%;
+  padding-top: 150px;
+}
+
+/* line 20, src/scss/_components/common/our.scss */
+.our__bg img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+  border: 5px solid #fff;
+  -webkit-filter: drop-shadow(15px 15px 45px rgba(0, 0, 0, 0.1));
+          filter: drop-shadow(15px 15px 45px rgba(0, 0, 0, 0.1));
+}
+
+/* line 30, src/scss/_components/common/our.scss */
+.our__wrapper {
+  z-index: 2;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* line 35, src/scss/_components/common/our.scss */
+.our__wrapper-left, .our__wrapper-right {
+  width: 50%;
+}
+
+/* line 41, src/scss/_components/common/our.scss */
+.our__label {
+  text-align: left;
+}
+
+/* line 45, src/scss/_components/common/our.scss */
+.our__title {
+  padding-bottom: 60px;
+  font-size: 60px;
+  line-height: 72px;
+}
+
+/* line 51, src/scss/_components/common/our.scss */
+.our__desc {
+  width: 100%;
+  max-width: 687px;
+}
+
+/* line 55, src/scss/_components/common/our.scss */
+.our__desc:last-of-type {
+  padding-bottom: 100px;
+}
+
+/* line 59, src/scss/_components/common/our.scss */
+.our__desc + .our__desc {
+  padding-top: 50px;
+}
+
+/* line 64, src/scss/_components/common/our.scss */
+.our__box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+/* line 68, src/scss/_components/common/our.scss */
+.our__box-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* line 72, src/scss/_components/common/our.scss */
+.our__box-wrapper > div {
+  padding-right: 28px;
+}
+
+/* line 77, src/scss/_components/common/our.scss */
+.our__box img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+  border: 5px solid #fff;
+  -webkit-filter: drop-shadow(15px 15px 45px rgba(0, 0, 0, 0.1));
+          filter: drop-shadow(15px 15px 45px rgba(0, 0, 0, 0.1));
+}
+
+/* line 3, src/scss/_components/common/video.scss */
+.video {
+  padding-top: 125px;
+  padding-bottom: 75px;
+}
+
+/* line 7, src/scss/_components/common/video.scss */
+.video__label {
+  text-align: left;
+}
+
+/* line 11, src/scss/_components/common/video.scss */
+.video__title {
+  padding-bottom: 40px;
+  font-size: 90px;
+  line-height: 90px;
+}
+
+/* line 17, src/scss/_components/common/video.scss */
+.video__link {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+/* line 21, src/scss/_components/common/video.scss */
+.video__link a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 20px;
+  font-weight: 900;
+  font-size: 18px;
+  letter-spacing: 0.02em;
+  color: #000;
+}
+
+/* line 30, src/scss/_components/common/video.scss */
+.video__link hr {
+  width: 99px;
+  height: 2px;
+  padding: 0;
+  margin: 0;
+  background-color: #bd9e56;
+}
+
+/* line 39, src/scss/_components/common/video.scss */
+.video__box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+/* line 43, src/scss/_components/common/video.scss */
+.video__box-wrapper {
+  position: relative;
+  left: -16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  width: -webkit-calc(100% + 16px);
+  width: calc(100% + 16px);
+}
+
+/* line 50, src/scss/_components/common/video.scss */
+.video__box-wrapper > div {
+  width: 100%;
+  max-width: -webkit-calc(100% / 3);
+  max-width: calc(100% / 3);
+  padding-left: 16px;
+  padding-bottom: 16px;
+}
+
+/* line 58, src/scss/_components/common/video.scss */
+.video__box img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
 }
 
 /* line 3, src/scss/_components/common/media.scss */

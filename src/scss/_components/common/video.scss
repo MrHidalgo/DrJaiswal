@@ -1,0 +1,67 @@
+// SECTION :: START
+
+.video {
+	padding-top: 125px;
+	padding-bottom: 75px;
+
+	&__label {
+		text-align: left;
+	}
+
+	&__title {
+		padding-bottom: 40px;
+		font-size: 90px;
+		line-height: 90px;
+	}
+
+	&__link {
+		display: flex;
+		flex-direction: column;
+
+		a {
+			display: flex;
+			padding-bottom: 20px;
+			font-weight: 900;
+			font-size: 18px;
+			letter-spacing: 0.02em;
+			color: #000;
+		}
+
+		hr {
+			width: 99px;
+			height: 2px;
+			padding: 0;
+			margin: 0;
+			background-color: #bd9e56;
+		}
+	}
+
+	&__box {
+		display: flex;
+		align-items: flex-start;
+
+		&-wrapper {
+			position: relative;
+			left: -16px;
+			display: flex;
+			flex-wrap: wrap;
+			width: calc(100% + 16px);
+
+			> div {
+				width: 100%;
+				max-width: calc(100% / 3);
+				padding-left: 16px;
+				padding-bottom: 16px;
+			}
+		}
+
+		img {
+			display: block;
+			max-width: 100%;
+			height: auto;
+			max-height: 100%;
+		}
+	}
+}
+
+// SECTION :: END
