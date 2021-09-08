@@ -36,14 +36,20 @@
 	@if $filename == instagram {
 		$char: "\E003";
 	}
-	@if $filename == quote {
+	@if $filename == prev {
 		$char: "\E004";
 	}
-	@if $filename == realself {
+	@if $filename == quote {
 		$char: "\E005";
 	}
-	@if $filename == yelp {
+	@if $filename == realself {
 		$char: "\E006";
+	}
+	@if $filename == stars {
+		$char: "\E007";
+	}
+	@if $filename == yelp {
+		$char: "\E008";
 	}
 
 	@return $char;
@@ -72,12 +78,20 @@
 	@include icon(instagram);
 
 }
+.icon-prev {
+	@include icon(prev);
+
+}
 .icon-quote {
 	@include icon(quote);
 
 }
 .icon-realself {
 	@include icon(realself);
+
+}
+.icon-stars {
+	@include icon(stars);
 
 }
 .icon-yelp {

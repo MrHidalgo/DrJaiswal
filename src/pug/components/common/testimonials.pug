@@ -1,0 +1,40 @@
+// SECTION :: START
+
+section#testimonials.testimonials
+
+  .testimonials__bg
+    img(src="img/logo-blockquote.svg" alt="")
+
+  .c-grid
+    .testimonials__wrapper
+      .testimonials__wrapper-left
+
+        .testimonials__slider
+          .testimonialsSlider.swiper
+            .swiper-wrapper
+              each val, idx in [1,2,3,4,5]
+                .swiper-slide
+                  h2.testimonials__title.c-title In the words of our patients...
+                  .testimonials__content
+                    div
+                      p.testimonials__subtitle.c-title Always Friendly & Professional Staff
+                      i.icon-font.icon-stars
+                    div
+                      p.testimonials__desc.c-desc Always friendly & professional staff. Clean & polished! Awesome personal service detailed around your wants & needs. First rate, happy place.
+
+            div(class="testimonials__slider-btn testimonials__slider-btn--prev")
+              i.icon-font.icon-prev
+            div(class="testimonials__slider-btn testimonials__slider-btn--next")
+              i.icon-font.icon-prev
+
+      .testimonials__wrapper-right
+
+        .testimonials__client-wrapper
+          .testimonials__client
+            img(src="img/img-testimonials-client.jpg" alt="")
+          .testimonials__client-box
+            p.testimonials__client-title.c-title PATIENT STORIES
+            a.testimonials__client-link(href="#") READ MORE
+            .testimonials__client-line
+
+// SECTION :: END

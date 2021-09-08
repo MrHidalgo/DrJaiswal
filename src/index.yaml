@@ -9,7 +9,7 @@ PageList:
   ready: 1
 - file: me.html
   titleName: Me
-  ready: 1
+  ready: 55
 - file: face-procedeures.html
   titleName: Face Procedeures
   ready: 1
