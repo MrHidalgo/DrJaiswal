@@ -11,3 +11,13 @@ block content
   div.body(class!= pageClassName)
 
     +mainSection('about', 'img-about-main-bg.jpg', 'ABOUT ATELIER', ['HOME', '|', 'ABOUT'])
+
+    section.mePage
+      include components/common/our
+      include components/common/about
+      include components/common/testimonials
+      include components/common/video
+      include components/common/media
+
+    include components/common/schedule
+    include components/common/practice

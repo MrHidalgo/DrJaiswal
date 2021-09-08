@@ -33,6 +33,10 @@
 		min-height: 100%;
 		padding: 50px 40px;
 		background-color: #000;
+		background-image: url('../img/img-black-pattern.jpg');
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
 
 		&-wrapper {
 			position: relative;
@@ -87,6 +91,10 @@
 		min-height: 230px;
 		padding: 30px 30px 20px;
 		background-color: #000000;
+		background-image: url('../img/img-black-pattern.jpg');
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
 
 		&-wrapper {
 			position: relative;
