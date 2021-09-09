@@ -10,8 +10,8 @@ PageList:
 - file: me.html
   titleName: Me
   ready: 55
-- file: face-procedeures.html
-  titleName: Face Procedeures
+- file: face-procedures.html
+  titleName: Face Procedures
   ready: 1
 - file: breast-procedures.html
   titleName: Breast Procedures

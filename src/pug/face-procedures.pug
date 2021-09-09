@@ -1,0 +1,23 @@
+---
+title: DrJaiswal | Face Procedures
+
+pageClassName: p-face-procedures
+---
+extends shared/_layout
+
+block content
+  div.body(class!= pageClassName)
+
+    +mainSection('face-procedures', 'img-face-procedures-main-bg.jpg', 'FACE PROCEDURES', ['HOME', '|', 'PROCEDURES', '|', 'FACE'])
+
+    include components/procedures/natural
+
+    include components/common/facelift
+
+    section.faceProceduresPage
+      include components/common/lift
+
+      include components/common/testimonials
+
+    include components/common/schedule
+    include components/common/practice
