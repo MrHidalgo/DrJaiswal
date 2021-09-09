@@ -15,10 +15,10 @@ PageList:
   ready: 55
 - file: breast-procedures.html
   titleName: Breast Procedures
-  ready: 1
+  ready: 55
 - file: body-procedures.html
   titleName: Body Procedures
-  ready: 1
+  ready: 55
 - file: gallery.html
   titleName: Gallery
   ready: 55
