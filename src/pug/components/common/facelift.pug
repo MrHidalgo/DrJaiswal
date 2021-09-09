@@ -1,9 +1,13 @@
 // SECTION :: START
 
-section#facelift.facelift(class!= (pageClassName === 'p-breast-procedures') ? 'facelift--breast-procedures':(pageClassName === 'p-body-procedures') ? 'facelift--body-procedures':'')
+section#facelift.facelift(class!= (pageClassName === 'p-breast-procedures p-home') ? 'facelift--breast-procedures':(pageClassName === 'p-body-procedures') ? 'facelift--body-procedures':(pageClassName === 'p-breast-procedures')?'facelift--breast-procedures':'')
 
   .facelift__bg
-    if(pageClassName === 'p-face-procedures')
+    if(pageClassName === 'p-breast-procedures p-home')
+      img.facelift__bg-img(src="img/img-facelift-1-bg.jpg" alt="")
+    else if(pageClassName === 'p-home')
+      img.facelift__bg-img(src="img/img-facelift-bg.jpg" alt="")
+    else if(pageClassName === 'p-face-procedures')
       img.facelift__bg-img(src="img/img-facelift-bg.jpg" alt="")
     else if(pageClassName === 'p-breast-procedures')
       img.facelift__bg-img(src="img/img-facelift-1-bg.jpg" alt="")
@@ -18,7 +22,15 @@ section#facelift.facelift(class!= (pageClassName === 'p-breast-procedures') ? 'f
     .facelift__wrapper
       .facelift__wrapper-left
 
-        if(pageClassName === 'p-face-procedures')
+        if(pageClassName === 'p-breast-procedures p-home')
+          p.facelift__label.c-label BREAST PROCEDURES
+          h2.facelift__title.c-title!= "BREAST <span>AUGMENTATION</span>"
+          p.facelift__desc.c-desc Dr. Jaiswal’s precise surgical and artistic techniques for breast augmentation in Las Vegas, NV, will make you feel more confident, sexy, and attractive. You may have dreamt of having fuller breasts or have uneven breasts you want to resolve - and your dream can come true.
+        else if(pageClassName === 'p-home')
+          p.facelift__label.c-label FACE PROCEDURES
+          h2.facelift__title.c-title FACELIFT
+          p.facelift__desc.c-desc If you feel your face has lost its fresh, youthful appeal, it may be time to consider a facelift. This custom surgery is the gold standard for facial rejuvenation and achieving a refreshed, vibrant appearance. Modern, advanced facelift techniques produce refreshed, natural-looking results that can last for 10 to 15 years.
+        else if(pageClassName === 'p-face-procedures')
           p.facelift__label.c-label FACE PROCEDURES
           h2.facelift__title.c-title FACELIFT
           p.facelift__desc.c-desc If you feel your face has lost its fresh, youthful appeal, it may be time to consider a facelift. This custom surgery is the gold standard for facial rejuvenation and achieving a refreshed, vibrant appearance. Modern, advanced facelift techniques produce refreshed, natural-looking results that can last for 10 to 15 years.
@@ -31,10 +43,31 @@ section#facelift.facelift(class!= (pageClassName === 'p-breast-procedures') ? 'f
           h2.facelift__title.c-title TUMMY TUCK
           p.facelift__desc.c-desc Dr. Jaiswal’s precise surgical and artistic techniques for breast augmentation in Las Vegas, NV, will make you feel more confident, sexy, and attractive. You may have dreamt of having fuller breasts or have uneven breasts you want to resolve - and your dream can come true.
 
-        .facelift__link
-          a(href="#") LEARN MORE
-          hr
+        .facelift__link-wrapper
+          .facelift__link
+            a(href="#") LEARN MORE
+            hr
+          if(pageClassName === 'p-home')
+            .facelift__link
+              a(href="#") OTHER FACE PROCEDURES
+              hr
+          if(pageClassName === 'p-breast-procedures p-home')
+            .facelift__link
+              a(href="#") OTHER BREAST PROCEDURES
+              hr
 
       .facelift__wrapper-right
+
+      if(pageClassName === 'p-home')
+        nav.facelift__nav
+          a.c-title(href="#") BROW LIFT
+          a.c-title(href="#") NECK LIFT
+          a.c-title(href="#") RHINOPLASTY
+
+      if(pageClassName === 'p-breast-procedures p-home')
+        nav.facelift__nav
+          a.c-title(href="#") BREAST LIFT
+          a.c-title(href="#") BREAST REVISION
+          a.c-title(href="#") NIPPLE REPAIR
 
 // SECTION :: END

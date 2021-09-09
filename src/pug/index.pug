@@ -12,5 +12,22 @@ block content
 
     +mainSection('home', 'img-home-main-bg.jpg')
 
+    section.homePage
+      include components/home/home
+      include components/common/about
+      include components/common/blockquote
+      include components/common/facelift
+
+    section.homePage
+      -
+        pageClassName = 'p-breast-procedures p-home'
+
+      include components/common/facelift
+
+      include components/home/features
+
+      include components/common/gallery
+      include components/common/testimonials
+
     include components/common/schedule
     include components/common/practice

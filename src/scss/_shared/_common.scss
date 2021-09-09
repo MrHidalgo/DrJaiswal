@@ -9,6 +9,7 @@
 	background-size: cover;
 }
 
+.homePage,
 .mePage,
 .aboutPage,
 .faceProceduresPage,
@@ -17,6 +18,14 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
+
+	& + .homePage {
+		padding-top: 150px;
+
+		.facelift {
+			margin-bottom: 150px;
+		}
+	}
 }
 
 .resourcesPage {

@@ -1,0 +1,149 @@
+// SECTION :: START
+
+.features {
+	position: relative;
+	padding-top: 220px;
+	margin-bottom: 150px;
+
+	&__bg {
+		z-index: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-image: url('../img/img-features.jpg');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+
+		&:after {
+			content: '';
+			opacity: 0.7;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(rgba(0, 0, 0, 0) 0%, #000 100%);
+		}
+	}
+
+	&__wrapper {
+		z-index: 2;
+		position: relative;
+		width: 100%;
+		max-width: 830px;
+		margin-left: auto;
+		margin-right: auto;
+
+		&:after {
+			content: '';
+			position: absolute;
+			top: 75px;
+			width: 100%;
+			height: calc(100% - 75px);
+			background-color: #000000;
+			background-image: url('../img/img-black-pattern.jpg');
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+	}
+
+	&__content {
+		z-index: 5;
+		position: relative;
+	}
+
+	&__logo {
+		display: flex;
+		align-items: flex-start;
+		justify-content: center;
+		padding-bottom: 35px;
+
+		img {
+			display: block;
+			width: 106px;
+			height: auto;
+		}
+	}
+
+	&__label {
+		color: #ffffff;
+	}
+
+	&__title {
+		padding-bottom: 50px;
+		text-align: center;
+		font-size: 90px;
+		line-height: 90px;
+	}
+
+	&__desc {
+		width: 100%;
+		max-width: 555px;
+		padding-bottom: 60px;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+		color: #ffffff;
+	}
+
+	&__link {
+		display: flex;
+		flex-direction: column;
+
+		&-wrapper {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			width: 100%;
+			max-width: 555px;
+			margin-left: auto;
+			margin-right: auto;
+			padding-bottom: 150px;
+		}
+
+		a {
+			display: flex;
+			align-items: center;
+			margin-bottom: 20px;
+			font-weight: 900;
+			font-size: 18px;
+			letter-spacing: 0.02em;
+			line-height: 38px;
+			color: #fff;
+		}
+
+		hr {
+			width: 99px;
+			height: 2px;
+			margin: 0;
+			padding: 0;
+			border: none;
+			background-color: #bd9e56;
+		}
+	}
+
+	&__nav {
+		z-index: 10;
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 180px;
+
+		a {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-left: 60px;
+			margin-right: 60px;
+			font-size: 30px;
+			line-height: 30px;
+		}
+	}
+}
+
+// SECTION :: END

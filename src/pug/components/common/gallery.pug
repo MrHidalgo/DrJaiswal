@@ -5,7 +5,9 @@ section#gallery.gallery
   .gallery__bg
 
     .gallery__bg-media
-      if(pageClassName === 'p-face-procedures')
+      if(pageClassName === 'p-home')
+        img(src="img/img-gallery-bg-2.jpg" alt="")
+      else if(pageClassName === 'p-face-procedures')
         img(src="img/img-gallery-bg-1.jpg" alt="")
       else if(pageClassName === 'p-breast-procedures')
         img(src="img/img-gallery-bg-2.jpg" alt="")
@@ -22,7 +24,10 @@ section#gallery.gallery
 
     .gallery__media-wrapper
       .gallery__media
-        if(pageClassName === 'p-face-procedures')
+        if(pageClassName === 'p-home')
+          img(src="img/img-gallery-1.jpg" alt="")
+          img(src="img/img-gallery-2.jpg" alt="")
+        else if(pageClassName === 'p-face-procedures')
           img(src="img/img-gallery-1.jpg" alt="")
           img(src="img/img-gallery-2.jpg" alt="")
         else if(pageClassName === 'p-breast-procedures')
