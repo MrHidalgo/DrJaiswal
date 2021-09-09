@@ -8,9 +8,13 @@ extends shared/_layout
 block content
   div.body(class!= pageClassName)
 
-    +mainSection('me', 'img-me-main-bg.jpg', 'DR. ROHIT JAISWAL, MD', ['HOME', '|', 'ABOUT', '|', 'DR. JAISWAL'])
+    +mainSection('body-procedures', 'img-body-procedures-main-bg.jpg', 'BODY PROCEDURES', ['HOME', '|', 'PROCEDURES', '|', 'BODY'])
 
-    section.mePage
+    include components/common/facelift
+
+    section.breastProceduresPage
+      include components/common/lift
+      include components/common/gallery
       include components/common/testimonials
 
     include components/common/schedule

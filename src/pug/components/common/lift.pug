@@ -7,37 +7,67 @@ section#lift.lift
       .lift__box-wrapper
         div
           a.lift__box(href="#")
-            p.lift__box-title.c-title Lip LIFT
+            if(pageClassName === 'p-face-procedures')
+              p.lift__box-title.c-title Lip LIFT
+            else if(pageClassName === 'p-breast-procedures')
+              p.lift__box-title.c-title BREAST IMPLANTS
+            else
+              p.lift__box-title.c-title Thigh Lift
             .lift__box-link
               p LEARN MORE
               hr
         div
           a.lift__box(href="#")
-            p.lift__box-title.c-title RHINOPLASTY
+            if(pageClassName === 'p-face-procedures')
+              p.lift__box-title.c-title RHINOPLASTY
+            else if(pageClassName === 'p-breast-procedures')
+              p.lift__box-title.c-title BREAST REDUCTION
+            else
+              p.lift__box-title.c-title LIPOSUCTION
             .lift__box-link
               p LEARN MORE
               hr
         div
           a.lift__box(href="#")
-            p.lift__box-title.c-title EYE LIFT
+            if(pageClassName === 'p-face-procedures')
+              p.lift__box-title.c-title EYE LIFT
+            else if(pageClassName === 'p-breast-procedures')
+              p.lift__box-title.c-title BREAST REVISION
+            else
+              p.lift__box-title.c-title BRAZILIAN BUTT LIFT
             .lift__box-link
               p LEARN MORE
               hr
         div
           a.lift__box(href="#")
-            p.lift__box-title.c-title BROW LIFT
+            if(pageClassName === 'p-face-procedures')
+              p.lift__box-title.c-title BROW LIFT
+            else if(pageClassName === 'p-breast-procedures')
+              p.lift__box-title.c-title IMPLANT REMOVAL
+            else
+              p.lift__box-title.c-title FAT TRANSFER
             .lift__box-link
               p LEARN MORE
               hr
         div
           a.lift__box(href="#")
-            p.lift__box-title.c-title NECKLIFT
+            if(pageClassName === 'p-face-procedures')
+              p.lift__box-title.c-title NECKLIFT
+            else if(pageClassName === 'p-breast-procedures')
+              p.lift__box-title.c-title BREAST RECONSTRUCTION
+            else
+              p.lift__box-title.c-title ABDOMINOPLASTY
             .lift__box-link
               p LEARN MORE
               hr
         div
           a.lift__box(href="#")
-            p.lift__box-title.c-title OTOPLASTY
+            if(pageClassName === 'p-face-procedures')
+              p.lift__box-title.c-title OTOPLASTY
+            else if(pageClassName === 'p-breast-procedures')
+              p.lift__box-title.c-title BREAST LIFT
+            else
+              p.lift__box-title.c-title BRACHIOPLASTY
             .lift__box-link
               p LEARN MORE
               hr
