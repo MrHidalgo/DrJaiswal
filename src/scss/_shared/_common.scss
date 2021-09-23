@@ -21,9 +21,15 @@
 
 	& + .homePage {
 		padding-top: 150px;
+		@include adaptive(1023) {
+			padding-top: 100px;
+		}
 
 		.facelift {
 			margin-bottom: 150px;
+			@include adaptive(1439) {
+				margin-bottom: 100px;
+			}
 		}
 	}
 }

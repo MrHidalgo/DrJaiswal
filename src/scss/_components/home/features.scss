@@ -4,6 +4,10 @@
 	position: relative;
 	padding-top: 220px;
 	margin-bottom: 150px;
+	@include adaptive(1439) {
+		padding-top: 150px;
+		margin-bottom: 100px;
+	}
 
 	&__bg {
 		z-index: 0;
@@ -76,8 +80,10 @@
 	&__title {
 		padding-bottom: 50px;
 		text-align: center;
-		font-size: 90px;
-		line-height: 90px;
+		//font-size: 90px;
+		//line-height: 90px;
+		@include fluid(font-size, 320px, 1800px, 45px, 90px);
+		@include fluid(line-height, 320px, 1800px, 45px, 90px);
 	}
 
 	&__desc {
@@ -103,6 +109,21 @@
 			margin-left: auto;
 			margin-right: auto;
 			padding-bottom: 150px;
+			@include adaptive(1439) {
+				padding-bottom: 100px;
+			}
+		}
+
+		&:hover {
+			a {
+				color: #c39d48;
+				@include transition(color);
+			}
+
+			hr {
+				width: 120px;
+				@include transition(width);
+			}
 		}
 
 		a {
@@ -114,6 +135,11 @@
 			letter-spacing: 0.02em;
 			line-height: 38px;
 			color: #fff;
+			@include transition(color);
+			@include adaptive(1023) {
+				font-size: 14px;
+				line-height: 30px;
+			}
 		}
 
 		hr {
@@ -123,6 +149,7 @@
 			padding: 0;
 			border: none;
 			background-color: #bd9e56;
+			@include transition(width);
 		}
 	}
 
@@ -133,8 +160,13 @@
 		align-items: center;
 		justify-content: center;
 		height: 180px;
+		@include adaptive(1279) {
+			height: 150px;
+		}
 
 		a {
+			outline: none;
+			position: relative;
 			display: flex;
 			align-items: center;
 			justify-content: center;
@@ -142,6 +174,33 @@
 			margin-right: 60px;
 			font-size: 30px;
 			line-height: 30px;
+			@include adaptive(1279) {
+				font-size: 26px;
+				line-height: normal;
+			}
+			@include adaptive(1023) {
+				font-size: 22px;
+				margin-left: 30px;
+				margin-right: 30px;
+			}
+
+			&:hover {
+				&:after {
+					width: 120px;
+					@include transition(width);
+				}
+			}
+
+			&:after {
+				content: '';
+				position: absolute;
+				left: 0;
+				bottom: -10px;
+				width: 0;
+				height: 2px;
+				background-color: #bd9e56;
+				@include transition(width);
+			}
 		}
 	}
 }

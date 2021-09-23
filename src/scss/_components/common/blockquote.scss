@@ -3,6 +3,10 @@
 .blockquote {
 	padding-top: 75px;
 	padding-bottom: 75px;
+	@include adaptive(1279) {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
 
 	&__logo {
 		display: flex;
@@ -32,6 +36,9 @@
 			line-height: 50px;
 			text-align: center;
 			color: #000000;
+			@include adaptive(1279) {
+				line-height: 40px;
+			}
 		}
 
 		.icon-font {

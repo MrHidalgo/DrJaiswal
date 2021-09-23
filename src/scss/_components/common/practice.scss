@@ -7,15 +7,20 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
-
-	&__wrapper {
-
+	@include adaptive(1279) {
+		padding-top: 100px;
+		padding-bottom: 130px;
 	}
 
 	&__title {
 		padding-bottom: 60px;
 		text-align: center;
-		font-size: 60px;
+		//font-size: 60px;
+		@include fluid(font-size, 320px, 1800px, 35px, 60px);
+		@include fluid(line-height, 320px, 1800px, 45px, 70px);
+		@include adaptive(1279) {
+			padding-bottom: 30px;
+		}
 	}
 
 	&__desc {
@@ -28,10 +33,35 @@
 	}
 
 	&__link {
+		position: relative;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		font-size: 30px;
+		@include adaptive(1279) {
+			font-size: 26px;
+			line-height: normal;
+		}
+		@include adaptive(1023) {
+			font-size: 22px;
+		}
+
+		&:hover {
+			&:after {
+				width: 120px;
+				@include transition(width);
+			}
+		}
+
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: -10px;
+			width: 0;
+			height: 2px;
+			background-color: #bd9e56;
+			@include transition(width);
+		}
 
 		&-wrapper {
 			display: flex;

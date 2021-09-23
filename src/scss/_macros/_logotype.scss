@@ -5,9 +5,17 @@
 	align-items: center;
 
 	&.logo--header {
-		.logo__btn {
-			img {
-				max-width: 65px;
+		height: 100%;
+
+		.logo {
+			&__btn {
+				display: flex;
+				align-items: center;
+				height: 100%;
+
+				img {
+					max-width: 65px;
+				}
 			}
 		}
 	}
@@ -16,6 +24,9 @@
 		.logo__btn {
 			img {
 				max-width: 187px;
+				@include adaptive(1439) {
+					max-width: 130px;
+				}
 			}
 		}
 	}
@@ -28,6 +39,7 @@
 			display: block;
 			max-width: 100%;
 			height: auto;
+			max-height: 100%;
 		}
 	}
 }

@@ -4,6 +4,10 @@
 	position: relative;
 	padding-top: 75px;
 	padding-bottom: 75px;
+	@include adaptive(1439) {
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
 
 	&__bg {
 		z-index: 0;
@@ -30,10 +34,19 @@
 		display: flex;
 		align-items: center;
 		padding-top: 150px;
+		@include adaptive(1439) {
+			padding-top: 100px;
+		}
+		@include adaptive(1279) {
+			padding-top: 50px;
+		}
 
 		&-left {
 			width: 60%;
 			padding-right: 100px;
+			@include adaptive(1023) {
+				padding-right: 50px;
+			}
 		}
 
 		&-right {
@@ -52,8 +65,19 @@
 			width: 70px;
 			height: 70px;
 			margin-top: 80px;
-			border: 2px solid #bd9e56;
+			border: 2px solid #c39d48;
 			background-color: transparent;
+			@include transition(background-color);
+
+			&:hover {
+				background-color: #c39d48;
+				@include transition(background-color);
+
+				.icon-font {
+					color: #ffffff;
+					@include transition(color);
+				}
+			}
 
 			&:not(:last-of-type) {
 				margin-right: 20px;
@@ -68,6 +92,7 @@
 			.icon-font {
 				font-size: 25px;
 				color: #c39d48;
+				@include transition(color);
 			}
 		}
 	}
@@ -76,17 +101,29 @@
 		padding-bottom: 80px;
 		font-size: 40px;
 		line-height: 40px;
+		@include adaptive(1279) {
+			padding-bottom: 50px;
+			font-size: 35px;
+			line-height: normal;
+		}
 	}
 
 	&__desc {
 		width: 100%;
 		max-width: 390px;
+		@include adaptive(1279) {
+			max-width: 100%;
+			padding-top: 30px;
+		}
 	}
 
 	&__subtitle {
 		padding-bottom: 50px;
 		color: #000000;
 		font-size: 25px;
+		@include adaptive(1279) {
+			padding-bottom: 30px;
+		}
 
 		& + .icon-font {
 			font-size: 25px;
@@ -96,12 +133,24 @@
 
 	&__content {
 		display: flex;
+		@include adaptive(1279) {
+			flex-wrap: wrap;
+		}
 
 		> div {
 			width: 50%;
+			@include adaptive(1279) {
+				width: 100%;
+			}
 
 			&:not(:last-of-type) {
 				padding-right: 100px;
+				@include adaptive(1365) {
+					padding-right: 50px;
+				}
+				@include adaptive(1279) {
+					padding-right: 0;
+				}
 			}
 		}
 	}
@@ -140,6 +189,13 @@
 			background-position: center;
 			background-repeat: no-repeat;
 			background-size: cover;
+			@include adaptive(1279) {
+				padding: 30px;
+			}
+			@include adaptive(1023) {
+				padding: 15px;
+				transform: none;
+			}
 		}
 
 		&-title {
@@ -147,10 +203,18 @@
 			font-size: 40px;
 			line-height: 40px;
 			text-align: center;
+			@include adaptive(1279) {
+				font-size: 35px;
+				line-height: normal;
+			}
+			@include adaptive(1023) {
+				font-size: 30px;
+			}
 		}
 
 		&-link {
 			display: flex;
+			flex-direction: column;
 			align-items: center;
 			justify-content: center;
 			margin-bottom: 20px;
@@ -160,6 +224,24 @@
 			line-height: 38px;
 			color: #fff;
 			text-align: center;
+			@include transition(color);
+			@include adaptive(1279) {
+				font-size: 16px;
+			}
+			@include adaptive(1023) {
+				font-size: 14px;
+				line-height: 30px;
+			}
+
+			&:hover {
+				color: #bd9e56;
+				@include transition(color);
+
+				.testimonials__client-line {
+					width: 50px;
+					@include transition(width);
+				}
+			}
 		}
 
 		&-line {
@@ -169,6 +251,7 @@
 			margin-left: auto;
 			margin-right: auto;
 			background-color: #bd9e56;
+			@include transition(width);
 		}
 	}
 }

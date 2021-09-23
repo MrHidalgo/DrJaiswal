@@ -84,8 +84,10 @@
 	&__title {
 		padding-bottom: 40px;
 		text-align: center;
-		font-size: 60px;
-		line-height: 75px;
+		//font-size: 60px;
+		//line-height: 75px;
+		@include fluid(font-size, 320px, 1800px, 35px, 60px);
+		@include fluid(line-height, 320px, 1800px, 45px, 70px);
 	}
 
 	&__desc {

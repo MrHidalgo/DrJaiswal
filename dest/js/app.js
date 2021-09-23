@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 /*
 *
@@ -12,6 +12,24 @@
 * ============================
 * ============================
 * */
+
+/**
+ * @name initHeaderFixed
+ *
+ * @description Fixing the site header in the scrolling page.
+ */
+var initHeaderFixed = function initHeaderFixed() {
+  var getCurrentScroll = function getCurrentScroll() {
+    return window.pageYOffset || document.documentElement.scrollTop;
+  };
+  var shrinkHeader = 80;
+
+  $(window).scroll(function () {
+    var scroll = getCurrentScroll();
+
+    scroll >= shrinkHeader ? $('.header').addClass('is-fixed') : $('.header').removeClass('is-fixed');
+  });
+};
 
 /**
  * @name initPreventBehavior
@@ -73,6 +91,25 @@ var initSwiper = function initSwiper() {
 };
 
 /**
+ * @description Window on load.
+ */
+$(window).on("load", function (ev) {
+  // initHeaderFixed();
+});
+
+/**
+ * @description Window on resize.
+ */
+$(window).on("resize", function (ev) {});
+
+/**
+ * @description Window on scroll.
+ */
+$(window).on("scroll", function (ev) {
+  // initHeaderFixed();
+});
+
+/**
  * @description Document DOM ready.
  */
 (function () {
@@ -96,6 +133,7 @@ var initSwiper = function initSwiper() {
 
     // lib
     initSwiper();
+    initHeaderFixed();
     // ==========================================
 
     // callback

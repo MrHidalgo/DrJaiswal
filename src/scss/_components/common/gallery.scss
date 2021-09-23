@@ -29,6 +29,9 @@
 			width: 100%;
 			max-width: calc(100% - 138px);
 			height: calc(100% - 235px);
+			@include adaptive(1279) {
+				height: calc(100% - 155px);
+			}
 
 			img {
 				@extend %imageResCoverAbs;
@@ -65,10 +68,13 @@
 	}
 
 	&__wrapper {
-		z-index: 2;
-		position: relative;
+		//z-index: 2;
+		//position: relative;
 		display: flex;
 		padding-bottom: 100px;
+		@include adaptive(1365) {
+			padding-bottom: 50px;
+		}
 
 		&-left,
 		&-right {
@@ -78,8 +84,10 @@
 
 	&__title {
 		padding-bottom: 40px;
-		font-size: 90px;
-		line-height: 90px;
+		//font-size: 90px;
+		//line-height: 90px;
+		@include fluid(font-size, 320px, 1800px, 45px, 90px);
+		@include fluid(line-height, 320px, 1800px, 45px, 90px);
 	}
 
 	&__subtitle {
@@ -87,11 +95,30 @@
 		padding-right: 100px;
 		color: #000000;
 		font-size: 45px;
+		@include adaptive(1439) {
+			padding-top: 600px;
+		}
+		@include adaptive(1279) {
+			padding-top: 500px;
+			font-size: 40px;
+		}
 	}
 
 	&__link {
 		display: flex;
 		flex-direction: column;
+
+		&:hover {
+			a {
+				color: #c39d48;
+				@include transition(color);
+			}
+
+			hr {
+				width: 120px;
+				@include transition(width);
+			}
+		}
 
 		a {
 			display: flex;
@@ -102,6 +129,7 @@
 			letter-spacing: 0.02em;
 			line-height: 38px;
 			color: #fff;
+			@include transition(color);
 		}
 
 		hr {
@@ -111,6 +139,7 @@
 			padding: 0;
 			border: none;
 			background-color: #bd9e56;
+			@include transition(width);
 		}
 	}
 
@@ -119,6 +148,9 @@
 		position: relative;
 		display: flex;
 		align-items: center;
+		@include adaptive(1439) {
+			width: 100%;
+		}
 
 		&-wrapper {
 			position: absolute;
@@ -128,12 +160,21 @@
 			align-items: center;
 			padding: 45px 70px;
 			background-color: #000000;
+			@include adaptive(1439) {
+				width: 100%;
+				max-width: 55%;
+				padding: 25px 50px;
+			}
 		}
 
 		img {
 			display: block;
 			max-width: 100%;
 			height: auto;
+			@include adaptive(1439) {
+				flex: 1;
+				min-width: 1px;
+			}
 
 			&:not(:last-of-type) {
 				margin-right: 30px;

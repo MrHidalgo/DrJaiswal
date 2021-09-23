@@ -44,8 +44,10 @@
 
 	&__title {
 		padding-bottom: 60px;
-		font-size: 60px;
-		line-height: 72px;
+		//font-size: 60px;
+		//line-height: 72px;
+		@include fluid(font-size, 320px, 1800px, 35px, 60px);
+		@include fluid(line-height, 320px, 1800px, 45px, 70px);
 	}
 
 	&__desc {

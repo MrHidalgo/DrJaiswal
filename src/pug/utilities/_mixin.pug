@@ -18,7 +18,7 @@ mixin mainSection(classMod, img, title, breadcrumbsArr)
 			img(src!="img/" + img alt="")
 		.main__wrapper
 			if(classMod === 'home')
-				img(src="img/logo.svg" alt="")
+				img.main__logo(src="img/logo.svg" alt="")
 			else
 				.main__content
 					h1.main__title!= title

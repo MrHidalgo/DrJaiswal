@@ -4,6 +4,9 @@
 	position: relative;
 	padding-top: 75px;
 	padding-bottom: 75px;
+	@include adaptive(1439) {
+		padding-bottom: 40px;
+	}
 
 	&__bg {
 		z-index: 0;
@@ -20,19 +23,24 @@
 
 		&-media {
 			position: absolute;
-			top: -200px;
+			top: -115px;
 			right: 0;
 			display: flex;
 			align-items: center;
 			justify-content: flex-end;
 			width: 55%;
-			height: calc(100% + 400px);
+			height: calc(100% + 230px);
+			@include adaptive(1439) {
+				top: -80px;
+				height: calc(100% + 160px);
+			}
 
 			img {
-				display: block;
-				max-width: 100%;
-				height: auto;
-				max-height: 100%;
+				@extend %imageResCoverAbs;
+				//display: block;
+				//max-width: 100%;
+				//height: auto;
+				//max-height: 100%;
 				filter: drop-shadow(-20px 20px 65px rgba(0, 0, 0, 0.25));
 			}
 		}
@@ -62,13 +70,21 @@
 		padding-top: 200px;
 		color: #fff;
 		text-align: left;
+		@include adaptive(1023) {
+			padding-top: 100px;
+		}
 	}
 
 	&__title {
 		white-space: nowrap;
 		padding-bottom: 50px;
-		font-size: 60px;
-		line-height: 60px;
+		//font-size: 60px;
+		//line-height: 60px;
+		@include fluid(font-size, 320px, 1800px, 35px, 60px);
+		@include fluid(line-height, 320px, 1800px, 45px, 70px);
+		@include adaptive(1023) {
+			white-space: normal;
+		}
 	}
 
 	&__desc {
@@ -82,6 +98,21 @@
 		display: flex;
 		flex-direction: column;
 		margin-bottom: 180px;
+		@include adaptive(1023) {
+			margin-bottom: 100px;
+		}
+
+		&:hover {
+			a {
+				color: #c39d48;
+				@include transition(color);
+			}
+
+			hr {
+				width: 150px;
+				@include transition(width);
+			}
+		}
 
 		a {
 			display: flex;
@@ -92,6 +123,7 @@
 			letter-spacing: 0.02em;
 			line-height: 38px;
 			color: #fff;
+			@include transition(color);
 		}
 
 		hr {
@@ -103,6 +135,7 @@
 			box-shadow: none;
 			border-radius: 0;
 			background-color: #bd9e56;
+			@include transition(width);
 		}
 	}
 }

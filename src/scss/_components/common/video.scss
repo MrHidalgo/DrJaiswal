@@ -10,8 +10,10 @@
 
 	&__title {
 		padding-bottom: 40px;
-		font-size: 90px;
-		line-height: 90px;
+		//font-size: 90px;
+		//line-height: 90px;
+		@include fluid(font-size, 320px, 1800px, 45px, 90px);
+		@include fluid(line-height, 320px, 1800px, 45px, 90px);
 	}
 
 	&__link {
