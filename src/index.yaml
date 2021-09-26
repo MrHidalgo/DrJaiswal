@@ -3,13 +3,13 @@ ProjectTitle: DrJaiswal
 PageList:
 - file: index.html
   titleName: Home
-  ready: 55
+  ready: 90
 - file: about.html
   titleName: About
-  ready: 55
+  ready: 90
 - file: me.html
   titleName: Me
-  ready: 55
+  ready: 90
 - file: face-procedures.html
   titleName: Face Procedures
   ready: 55
