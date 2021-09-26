@@ -3,6 +3,16 @@
 .main {
 	position: relative;
 
+	&.main--home {
+		.main {
+			&__bg {
+				img {
+					object-position: 0 center;
+				}
+			}
+		}
+	}
+
 	&__bg {
 		position: absolute;
 		top: 0;
@@ -58,10 +68,12 @@
 	&__title {
 		padding-bottom: 15px;
 		@extend %fontWorthington;
-		font-size: 60px;
+		//font-size: 60px;
 		letter-spacing: 0.02em;
 		text-align: center;
 		color: #c39d48;
+		@include fluid(font-size, 320px, 1800px, 35px, 60px);
+		@include fluid(line-height, 320px, 1800px, 45px, 70px);
 	}
 
 	&__breadcrumbs {
@@ -81,6 +93,12 @@
 
 		a {
 			color: #ffffff;
+			@include transition(color);
+
+			&:hover {
+				color: #c39d48;
+				@include transition(color);
+			}
 
 			&:nth-of-type(2n) {
 				pointer-events: none;

@@ -2,12 +2,6 @@
 
 section#our.our
 
-  .our__bg
-    if(pageClassName !== 'p-about')
-      img(src="img/img-our.jpg" alt="")
-    else
-      img(src="img/img-our-about.jpg" alt="")
-
   .c-grid
     .our__wrapper
       .our__wrapper-left
@@ -36,5 +30,11 @@ section#our.our
                 img(src="img/img-our-box-3.jpg" alt="")
 
       .our__wrapper-right
+
+  .our__bg
+    if(pageClassName !== 'p-about')
+      img(src="img/img-our.jpg" alt="")
+    else
+      img(src="img/img-our-about.jpg" alt="")
 
 // SECTION :: END

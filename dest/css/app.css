@@ -1057,7 +1057,13 @@ picture {
   position: relative;
 }
 
-/* line 6, src/scss/_components/common/main.scss */
+/* line 9, src/scss/_components/common/main.scss */
+.main.main--home .main__bg img {
+  -o-object-position: 0 center;
+     object-position: 0 center;
+}
+
+/* line 16, src/scss/_components/common/main.scss */
 .main__bg {
   position: absolute;
   top: 0;
@@ -1066,7 +1072,7 @@ picture {
   height: 100%;
 }
 
-/* line 17, src/scss/_components/common/main.scss */
+/* line 27, src/scss/_components/common/main.scss */
 .main__bg:after {
   content: '';
   position: absolute;
@@ -1077,7 +1083,7 @@ picture {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* line 28, src/scss/_components/common/main.scss */
+/* line 38, src/scss/_components/common/main.scss */
 .main__wrapper {
   z-index: 2;
   position: relative;
@@ -1099,12 +1105,12 @@ picture {
   padding-right: 20px;
 }
 
-/* line 40, src/scss/_components/common/main.scss */
+/* line 50, src/scss/_components/common/main.scss */
 .main__content {
   width: 100%;
 }
 
-/* line 44, src/scss/_components/common/main.scss */
+/* line 54, src/scss/_components/common/main.scss */
 .main__logo {
   display: block;
   max-width: 100%;
@@ -1114,29 +1120,60 @@ picture {
 }
 
 @media screen and (max-width: 1799px) {
-  /* line 44, src/scss/_components/common/main.scss */
+  /* line 54, src/scss/_components/common/main.scss */
   .main__logo {
     max-width: 200px;
   }
 }
 
 @media screen and (max-width: 1535px) {
-  /* line 44, src/scss/_components/common/main.scss */
+  /* line 54, src/scss/_components/common/main.scss */
   .main__logo {
     max-width: 175px;
   }
 }
 
-/* line 58, src/scss/_components/common/main.scss */
+/* line 68, src/scss/_components/common/main.scss */
 .main__title {
   padding-bottom: 15px;
-  font-size: 60px;
   letter-spacing: 0.02em;
   text-align: center;
   color: #c39d48;
+  font-size: 35px;
+  line-height: 45px;
 }
 
-/* line 67, src/scss/_components/common/main.scss */
+@media screen and (min-width: 320px) {
+  /* line 68, src/scss/_components/common/main.scss */
+  .main__title {
+    font-size: -webkit-calc(35px + 25 * (100vw - 320px) / 1480);
+    font-size: calc(35px + 25 * (100vw - 320px) / 1480);
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  /* line 68, src/scss/_components/common/main.scss */
+  .main__title {
+    font-size: 60px;
+  }
+}
+
+@media screen and (min-width: 320px) {
+  /* line 68, src/scss/_components/common/main.scss */
+  .main__title {
+    line-height: -webkit-calc(45px + 25 * (100vw - 320px) / 1480);
+    line-height: calc(45px + 25 * (100vw - 320px) / 1480);
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  /* line 68, src/scss/_components/common/main.scss */
+  .main__title {
+    line-height: 70px;
+  }
+}
+
+/* line 79, src/scss/_components/common/main.scss */
 .main__breadcrumbs {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1152,7 +1189,7 @@ picture {
           justify-content: center;
 }
 
-/* line 72, src/scss/_components/common/main.scss */
+/* line 84, src/scss/_components/common/main.scss */
 .main__breadcrumbs a,
 .main__breadcrumbs p {
   display: -webkit-box;
@@ -1166,17 +1203,28 @@ picture {
   text-align: center;
 }
 
-/* line 82, src/scss/_components/common/main.scss */
+/* line 94, src/scss/_components/common/main.scss */
 .main__breadcrumbs a {
   color: #ffffff;
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 
-/* line 85, src/scss/_components/common/main.scss */
+/* line 98, src/scss/_components/common/main.scss */
+.main__breadcrumbs a:hover {
+  color: #c39d48;
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+/* line 103, src/scss/_components/common/main.scss */
 .main__breadcrumbs a:nth-of-type(2n) {
   pointer-events: none;
 }
 
-/* line 90, src/scss/_components/common/main.scss */
+/* line 108, src/scss/_components/common/main.scss */
 .main__breadcrumbs p {
   color: #c39d48;
 }
@@ -1201,7 +1249,7 @@ picture {
   }
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1279px) {
   /* line 3, src/scss/_components/common/schedule.scss */
   .schedule {
     padding-top: 150px;
@@ -1209,7 +1257,15 @@ picture {
   }
 }
 
-/* line 20, src/scss/_components/common/schedule.scss */
+@media screen and (max-width: 1023px) {
+  /* line 3, src/scss/_components/common/schedule.scss */
+  .schedule {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+
+/* line 24, src/scss/_components/common/schedule.scss */
 .schedule:after {
   content: '';
   position: absolute;
@@ -1220,7 +1276,7 @@ picture {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-/* line 30, src/scss/_components/common/schedule.scss */
+/* line 34, src/scss/_components/common/schedule.scss */
 .schedule__title {
   z-index: 2;
   position: relative;
@@ -1229,7 +1285,7 @@ picture {
 }
 
 @media screen and (min-width: 320px) {
-  /* line 30, src/scss/_components/common/schedule.scss */
+  /* line 34, src/scss/_components/common/schedule.scss */
   .schedule__title {
     font-size: -webkit-calc(35px + 35 * (100vw - 320px) / 1480);
     font-size: calc(35px + 35 * (100vw - 320px) / 1480);
@@ -1237,7 +1293,7 @@ picture {
 }
 
 @media screen and (min-width: 1800px) {
-  /* line 30, src/scss/_components/common/schedule.scss */
+  /* line 34, src/scss/_components/common/schedule.scss */
   .schedule__title {
     font-size: 70px;
   }
@@ -1397,7 +1453,21 @@ picture {
   padding-bottom: 75px;
 }
 
-/* line 8, src/scss/_components/common/our.scss */
+@media screen and (max-width: 1535px) {
+  /* line 3, src/scss/_components/common/our.scss */
+  .our {
+    padding-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  /* line 3, src/scss/_components/common/our.scss */
+  .our {
+    padding-top: 100px;
+  }
+}
+
+/* line 14, src/scss/_components/common/our.scss */
 .our__bg {
   z-index: 0;
   position: absolute;
@@ -1420,7 +1490,17 @@ picture {
   padding-top: 150px;
 }
 
-/* line 20, src/scss/_components/common/our.scss */
+@media screen and (max-width: 1023px) {
+  /* line 14, src/scss/_components/common/our.scss */
+  .our__bg {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 0 15px;
+  }
+}
+
+/* line 32, src/scss/_components/common/our.scss */
 .our__bg img {
   display: block;
   max-width: 100%;
@@ -1431,7 +1511,7 @@ picture {
           filter: drop-shadow(15px 15px 45px rgba(0, 0, 0, 0.1));
 }
 
-/* line 30, src/scss/_components/common/our.scss */
+/* line 42, src/scss/_components/common/our.scss */
 .our__wrapper {
   z-index: 2;
   position: relative;
@@ -1441,17 +1521,38 @@ picture {
   display: flex;
 }
 
-/* line 35, src/scss/_components/common/our.scss */
+@media screen and (max-width: 1023px) {
+  /* line 42, src/scss/_components/common/our.scss */
+  .our__wrapper {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+}
+
+/* line 50, src/scss/_components/common/our.scss */
 .our__wrapper-left, .our__wrapper-right {
   width: 50%;
 }
 
-/* line 41, src/scss/_components/common/our.scss */
+@media screen and (max-width: 1023px) {
+  /* line 50, src/scss/_components/common/our.scss */
+  .our__wrapper-left, .our__wrapper-right {
+    width: 100%;
+  }
+}
+
+/* line 58, src/scss/_components/common/our.scss */
+.our__wrapper-left {
+  padding-right: 30px;
+}
+
+/* line 63, src/scss/_components/common/our.scss */
 .our__label {
   text-align: left;
 }
 
-/* line 45, src/scss/_components/common/our.scss */
+/* line 67, src/scss/_components/common/our.scss */
 .our__title {
   padding-bottom: 60px;
   font-size: 35px;
@@ -1459,7 +1560,7 @@ picture {
 }
 
 @media screen and (min-width: 320px) {
-  /* line 45, src/scss/_components/common/our.scss */
+  /* line 67, src/scss/_components/common/our.scss */
   .our__title {
     font-size: -webkit-calc(35px + 25 * (100vw - 320px) / 1480);
     font-size: calc(35px + 25 * (100vw - 320px) / 1480);
@@ -1467,14 +1568,14 @@ picture {
 }
 
 @media screen and (min-width: 1800px) {
-  /* line 45, src/scss/_components/common/our.scss */
+  /* line 67, src/scss/_components/common/our.scss */
   .our__title {
     font-size: 60px;
   }
 }
 
 @media screen and (min-width: 320px) {
-  /* line 45, src/scss/_components/common/our.scss */
+  /* line 67, src/scss/_components/common/our.scss */
   .our__title {
     line-height: -webkit-calc(45px + 25 * (100vw - 320px) / 1480);
     line-height: calc(45px + 25 * (100vw - 320px) / 1480);
@@ -1482,29 +1583,50 @@ picture {
 }
 
 @media screen and (min-width: 1800px) {
-  /* line 45, src/scss/_components/common/our.scss */
+  /* line 67, src/scss/_components/common/our.scss */
   .our__title {
     line-height: 70px;
   }
 }
 
-/* line 53, src/scss/_components/common/our.scss */
+/* line 75, src/scss/_components/common/our.scss */
 .our__desc {
   width: 100%;
   max-width: 687px;
 }
 
-/* line 57, src/scss/_components/common/our.scss */
+/* line 79, src/scss/_components/common/our.scss */
 .our__desc:last-of-type {
   padding-bottom: 100px;
 }
 
-/* line 61, src/scss/_components/common/our.scss */
+@media screen and (max-width: 1439px) {
+  /* line 79, src/scss/_components/common/our.scss */
+  .our__desc:last-of-type {
+    padding-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  /* line 79, src/scss/_components/common/our.scss */
+  .our__desc:last-of-type {
+    padding-bottom: 30px;
+  }
+}
+
+/* line 89, src/scss/_components/common/our.scss */
 .our__desc + .our__desc {
   padding-top: 50px;
 }
 
-/* line 66, src/scss/_components/common/our.scss */
+@media screen and (max-width: 1279px) {
+  /* line 89, src/scss/_components/common/our.scss */
+  .our__desc + .our__desc {
+    padding-top: 30px;
+  }
+}
+
+/* line 97, src/scss/_components/common/our.scss */
 .our__box {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1516,7 +1638,7 @@ picture {
           align-items: flex-start;
 }
 
-/* line 70, src/scss/_components/common/our.scss */
+/* line 101, src/scss/_components/common/our.scss */
 .our__box-wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1528,12 +1650,12 @@ picture {
           align-items: center;
 }
 
-/* line 74, src/scss/_components/common/our.scss */
+/* line 105, src/scss/_components/common/our.scss */
 .our__box-wrapper > div {
   padding-right: 28px;
 }
 
-/* line 79, src/scss/_components/common/our.scss */
+/* line 110, src/scss/_components/common/our.scss */
 .our__box img {
   display: block;
   max-width: 100%;
@@ -2072,16 +2194,39 @@ picture {
 
 /* line 3, src/scss/_components/common/video.scss */
 .video {
+  z-index: 2;
+  position: relative;
   padding-top: 125px;
   padding-bottom: 75px;
 }
 
-/* line 7, src/scss/_components/common/video.scss */
+@media screen and (max-width: 1535px) {
+  /* line 3, src/scss/_components/common/video.scss */
+  .video {
+    padding-top: 75px;
+  }
+}
+
+@media screen and (max-width: 1365px) {
+  /* line 3, src/scss/_components/common/video.scss */
+  .video {
+    padding-top: 30px;
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  /* line 3, src/scss/_components/common/video.scss */
+  .video {
+    padding-bottom: 50px;
+  }
+}
+
+/* line 18, src/scss/_components/common/video.scss */
 .video__label {
   text-align: left;
 }
 
-/* line 11, src/scss/_components/common/video.scss */
+/* line 22, src/scss/_components/common/video.scss */
 .video__title {
   padding-bottom: 40px;
   font-size: 45px;
@@ -2089,7 +2234,7 @@ picture {
 }
 
 @media screen and (min-width: 320px) {
-  /* line 11, src/scss/_components/common/video.scss */
+  /* line 22, src/scss/_components/common/video.scss */
   .video__title {
     font-size: -webkit-calc(45px + 45 * (100vw - 320px) / 1480);
     font-size: calc(45px + 45 * (100vw - 320px) / 1480);
@@ -2097,14 +2242,14 @@ picture {
 }
 
 @media screen and (min-width: 1800px) {
-  /* line 11, src/scss/_components/common/video.scss */
+  /* line 22, src/scss/_components/common/video.scss */
   .video__title {
     font-size: 90px;
   }
 }
 
 @media screen and (min-width: 320px) {
-  /* line 11, src/scss/_components/common/video.scss */
+  /* line 22, src/scss/_components/common/video.scss */
   .video__title {
     line-height: -webkit-calc(45px + 45 * (100vw - 320px) / 1480);
     line-height: calc(45px + 45 * (100vw - 320px) / 1480);
@@ -2112,13 +2257,13 @@ picture {
 }
 
 @media screen and (min-width: 1800px) {
-  /* line 11, src/scss/_components/common/video.scss */
+  /* line 22, src/scss/_components/common/video.scss */
   .video__title {
     line-height: 90px;
   }
 }
 
-/* line 19, src/scss/_components/common/video.scss */
+/* line 30, src/scss/_components/common/video.scss */
 .video__link {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2131,7 +2276,23 @@ picture {
           flex-direction: column;
 }
 
-/* line 23, src/scss/_components/common/video.scss */
+/* line 35, src/scss/_components/common/video.scss */
+.video__link:hover a {
+  color: #c39d48;
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+/* line 40, src/scss/_components/common/video.scss */
+.video__link:hover hr {
+  width: 150px;
+  -webkit-transition: width 0.3s ease-in-out;
+  -o-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
+}
+
+/* line 46, src/scss/_components/common/video.scss */
 .video__link a {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2142,18 +2303,24 @@ picture {
   font-size: 18px;
   letter-spacing: 0.02em;
   color: #000;
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 
-/* line 32, src/scss/_components/common/video.scss */
+/* line 56, src/scss/_components/common/video.scss */
 .video__link hr {
   width: 99px;
   height: 2px;
   padding: 0;
   margin: 0;
   background-color: #bd9e56;
+  -webkit-transition: width 0.3s ease-in-out;
+  -o-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
 }
 
-/* line 41, src/scss/_components/common/video.scss */
+/* line 66, src/scss/_components/common/video.scss */
 .video__box {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2165,7 +2332,7 @@ picture {
           align-items: flex-start;
 }
 
-/* line 45, src/scss/_components/common/video.scss */
+/* line 70, src/scss/_components/common/video.scss */
 .video__box-wrapper {
   position: relative;
   left: -16px;
@@ -2180,7 +2347,7 @@ picture {
   width: calc(100% + 16px);
 }
 
-/* line 52, src/scss/_components/common/video.scss */
+/* line 77, src/scss/_components/common/video.scss */
 .video__box-wrapper > div {
   width: 100%;
   max-width: -webkit-calc(100% / 3);
@@ -2189,7 +2356,7 @@ picture {
   padding-bottom: 16px;
 }
 
-/* line 60, src/scss/_components/common/video.scss */
+/* line 85, src/scss/_components/common/video.scss */
 .video__box img {
   display: block;
   max-width: 100%;
@@ -2203,12 +2370,19 @@ picture {
   padding-bottom: 140px;
 }
 
-/* line 7, src/scss/_components/common/media.scss */
+@media screen and (max-width: 1279px) {
+  /* line 3, src/scss/_components/common/media.scss */
+  .media {
+    padding-bottom: 100px;
+  }
+}
+
+/* line 10, src/scss/_components/common/media.scss */
 .media__label {
   text-align: left;
 }
 
-/* line 11, src/scss/_components/common/media.scss */
+/* line 14, src/scss/_components/common/media.scss */
 .media__title {
   padding-bottom: 40px;
   font-size: 45px;
@@ -2216,7 +2390,7 @@ picture {
 }
 
 @media screen and (min-width: 320px) {
-  /* line 11, src/scss/_components/common/media.scss */
+  /* line 14, src/scss/_components/common/media.scss */
   .media__title {
     font-size: -webkit-calc(45px + 45 * (100vw - 320px) / 1480);
     font-size: calc(45px + 45 * (100vw - 320px) / 1480);
@@ -2224,14 +2398,14 @@ picture {
 }
 
 @media screen and (min-width: 1800px) {
-  /* line 11, src/scss/_components/common/media.scss */
+  /* line 14, src/scss/_components/common/media.scss */
   .media__title {
     font-size: 90px;
   }
 }
 
 @media screen and (min-width: 320px) {
-  /* line 11, src/scss/_components/common/media.scss */
+  /* line 14, src/scss/_components/common/media.scss */
   .media__title {
     line-height: -webkit-calc(45px + 45 * (100vw - 320px) / 1480);
     line-height: calc(45px + 45 * (100vw - 320px) / 1480);
@@ -2239,13 +2413,13 @@ picture {
 }
 
 @media screen and (min-width: 1800px) {
-  /* line 11, src/scss/_components/common/media.scss */
+  /* line 14, src/scss/_components/common/media.scss */
   .media__title {
     line-height: 90px;
   }
 }
 
-/* line 19, src/scss/_components/common/media.scss */
+/* line 22, src/scss/_components/common/media.scss */
 .media__link {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2258,7 +2432,23 @@ picture {
           flex-direction: column;
 }
 
-/* line 23, src/scss/_components/common/media.scss */
+/* line 27, src/scss/_components/common/media.scss */
+.media__link:hover a {
+  color: #c39d48;
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+/* line 32, src/scss/_components/common/media.scss */
+.media__link:hover hr {
+  width: 150px;
+  -webkit-transition: width 0.3s ease-in-out;
+  -o-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
+}
+
+/* line 38, src/scss/_components/common/media.scss */
 .media__link a {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2269,18 +2459,24 @@ picture {
   font-size: 18px;
   letter-spacing: 0.02em;
   color: #000;
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 
-/* line 32, src/scss/_components/common/media.scss */
+/* line 48, src/scss/_components/common/media.scss */
 .media__link hr {
   width: 99px;
   height: 2px;
   padding: 0;
   margin: 0;
   background-color: #bd9e56;
+  -webkit-transition: width 0.3s ease-in-out;
+  -o-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
 }
 
-/* line 41, src/scss/_components/common/media.scss */
+/* line 58, src/scss/_components/common/media.scss */
 .media__box {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2292,7 +2488,7 @@ picture {
           align-items: flex-start;
 }
 
-/* line 45, src/scss/_components/common/media.scss */
+/* line 62, src/scss/_components/common/media.scss */
 .media__box-wrapper {
   position: relative;
   left: -16px;
@@ -2308,7 +2504,16 @@ picture {
   padding-bottom: 95px;
 }
 
-/* line 53, src/scss/_components/common/media.scss */
+@media screen and (max-width: 1023px) {
+  /* line 62, src/scss/_components/common/media.scss */
+  .media__box-wrapper {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+}
+
+/* line 73, src/scss/_components/common/media.scss */
 .media__box-wrapper > div {
   width: 100%;
   max-width: -webkit-calc(100% / 6);
@@ -2317,32 +2522,47 @@ picture {
   padding-bottom: 16px;
 }
 
-/* line 59, src/scss/_components/common/media.scss */
+@media screen and (max-width: 1023px) {
+  /* line 73, src/scss/_components/common/media.scss */
+  .media__box-wrapper > div {
+    max-width: -webkit-calc(100% / 3);
+    max-width: calc(100% / 3);
+  }
+}
+
+/* line 82, src/scss/_components/common/media.scss */
 .media__box-wrapper > div:nth-of-type(1) {
   padding-top: 100px;
 }
 
-/* line 62, src/scss/_components/common/media.scss */
+/* line 85, src/scss/_components/common/media.scss */
 .media__box-wrapper > div:nth-of-type(2) {
   padding-top: 50px;
 }
 
-/* line 65, src/scss/_components/common/media.scss */
+/* line 88, src/scss/_components/common/media.scss */
 .media__box-wrapper > div:nth-of-type(4) {
   padding-top: 50px;
 }
 
-/* line 68, src/scss/_components/common/media.scss */
+/* line 91, src/scss/_components/common/media.scss */
 .media__box-wrapper > div:nth-of-type(5) {
   padding-top: 100px;
 }
 
-/* line 71, src/scss/_components/common/media.scss */
+/* line 94, src/scss/_components/common/media.scss */
 .media__box-wrapper > div:nth-of-type(6) {
   padding-top: 50px;
 }
 
-/* line 77, src/scss/_components/common/media.scss */
+@media screen and (max-width: 1023px) {
+  /* line 94, src/scss/_components/common/media.scss */
+  .media__box-wrapper > div:nth-of-type(6) {
+    padding-top: 150px;
+  }
+}
+
+/* line 103, src/scss/_components/common/media.scss */
 .media__box img {
   display: block;
   max-width: 100%;
