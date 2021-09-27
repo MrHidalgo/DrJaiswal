@@ -2,6 +2,9 @@
 
 .contact {
 	padding-top: 135px;
+	@include adaptive(1535) {
+		padding-top: 100px;
+	}
 
 	&__title {
 		padding-bottom: 40px;
@@ -19,6 +22,9 @@
 		margin-right: auto;
 		padding-bottom: 130px;
 		text-align: center;
+		@include adaptive(1535) {
+			padding-bottom: 100px;
+		}
 	}
 
 	&__form {
@@ -99,18 +105,31 @@
 				border-radius: 0;
 				background-color: transparent;
 
+				&:hover {
+					span {
+						color: #c39d48;
+						@include transition(color);
+					}
+					i {
+						width: 50px;
+						@include transition(width);
+					}
+				}
+
 				span {
 					padding-bottom: 20px;
 					font-weight: 900;
 					font-size: 18px;
 					letter-spacing: 0.02em;
 					color: #000;
+					@include transition(color);
 				}
 
 				i {
 					width: 99px;
 					height: 2px;
 					background-color: #c39d48;
+					@include transition(width);
 				}
 			}
 		}
@@ -142,11 +161,18 @@
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
+		@include adaptive(1279) {
+			min-height: unset;
+			padding: 40px;
+		  border-width: 5px;
+		}
 
 		&-title {
 			padding-bottom: 30px;
-			line-height: 60px;
-			font-size: 60px;
+			//line-height: 60px;
+			//font-size: 60px;
+			@include fluid(font-size, 320px, 1800px, 35px, 60px);
+			@include fluid(line-height, 320px, 1800px, 45px, 70px);
 		}
 
 		&-header {

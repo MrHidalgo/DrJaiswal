@@ -3,6 +3,10 @@
 .imagine {
 	padding-top: 150px;
 	padding-bottom: 150px;
+	@include adaptive(1279) {
+		padding-top: 100px;
+		padding-bottom: 100px;
+	}
 
 	&__wrapper {
 		display: flex;
@@ -11,9 +15,20 @@
 		max-width: 1920px;
 		margin-left: auto;
 		margin-right: auto;
+		@include adaptive(1279) {
+		  flex-wrap: wrap;
+			justify-content: space-between;
+		}
 
 		&-left,
 		&-right {
+			@include adaptive(1279) {
+				display: flex;
+				justify-content: center;
+				width: 100%;
+				max-width: calc((100% - 15px) / 2);
+			}
+
 			img {
 				display: block;
 				max-width: 100%;
@@ -24,19 +39,42 @@
 			}
 		}
 
+		&-left {
+			@include adaptive(1279) {
+				order: 2;
+				padding-left: 15px;
+			}
+		}
+
 		&-middle {
 			flex: 1;
 			min-width: 1px;
 			max-width: 100%;
 			padding-left: 50px;
 			padding-right: 50px;
+			@include adaptive(1279) {
+				order: 1;
+				flex: 100%;
+				padding-left: 15px;
+				padding-right: 15px;
+				padding-bottom: 30px;
+			}
+		}
+
+		&-right {
+			@include adaptive(1279) {
+				order: 3;
+				padding-right: 15px;
+			}
 		}
 	}
 
 	&__title {
 		padding-bottom: 60px;
 		text-align: center;
-		font-size: 80px;
+		//font-size: 80px;
+		@include fluid(font-size, 320px, 1800px, 35px, 80px);
+		@include fluid(line-height, 320px, 1800px, 45px, 90px);
 	}
 
 	&__desc {

@@ -3,28 +3,28 @@ ProjectTitle: DrJaiswal
 PageList:
 - file: index.html
   titleName: Home
-  ready: 90
+  ready: 75
 - file: about.html
   titleName: About
-  ready: 90
+  ready: 75
 - file: me.html
   titleName: Me
-  ready: 90
+  ready: 75
 - file: face-procedures.html
   titleName: Face Procedures
-  ready: 55
+  ready: 75
 - file: breast-procedures.html
   titleName: Breast Procedures
-  ready: 55
+  ready: 75
 - file: body-procedures.html
   titleName: Body Procedures
-  ready: 55
+  ready: 75
 - file: gallery.html
   titleName: Gallery
-  ready: 55
+  ready: 75
 - file: resources.html
   titleName: Resources
-  ready: 55
+  ready: 75
 - file: contact.html
   titleName: Contact
-  ready: 55
+  ready: 75

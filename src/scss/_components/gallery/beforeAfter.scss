@@ -3,6 +3,9 @@
 .beforeAfter {
 	&__wrapper {
 		padding-bottom: 200px;
+		@include adaptive(1535) {
+			padding-bottom: 150px;
+		}
 	}
 
 	&__heading {
@@ -27,6 +30,15 @@
 			&-slide {
 				position: relative;
 				width: 535px !important;
+				@include adaptive(1535) {
+					width: 500px !important;
+				}
+				@include adaptive(1365) {
+					width: 400px !important;
+				}
+				@include adaptive(1023) {
+					width: 300px !important;
+				}
 
 				img {
 					display: block;
@@ -40,7 +52,13 @@
 					position: absolute;
 					left: 57px;
 					bottom: 57px;
-					font-size: 40px;
+					//font-size: 40px;
+					@include fluid(font-size, 320px, 1800px, 25px, 40px);
+					@include fluid(line-height, 320px, 1800px, 35px, 50px);
+					@include adaptive(1023) {
+						left: 15px;
+						bottom: 15px;
+					}
 				}
 
 				&:after {

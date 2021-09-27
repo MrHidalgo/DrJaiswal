@@ -499,9 +499,23 @@ picture {
   padding-bottom: 200px;
 }
 
-/* line 41, src/scss/_shared/_common.scss */
+@media screen and (max-width: 1365px) {
+  /* line 37, src/scss/_shared/_common.scss */
+  .resourcesPage {
+    padding-bottom: 100px;
+  }
+}
+
+/* line 44, src/scss/_shared/_common.scss */
 .contactPage {
   padding-bottom: 50px;
+}
+
+@media screen and (max-width: 1279px) {
+  /* line 44, src/scss/_shared/_common.scss */
+  .contactPage {
+    padding-bottom: 0;
+  }
 }
 
 /* line 1, src/scss/_shared/_iconFont.scss */
@@ -3115,7 +3129,22 @@ picture {
   padding-bottom: 250px;
 }
 
-/* line 7, src/scss/_components/common/lift.scss */
+@media screen and (max-width: 1799px) {
+  /* line 3, src/scss/_components/common/lift.scss */
+  .lift {
+    padding-top: 100px;
+    padding-bottom: 150px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  /* line 3, src/scss/_components/common/lift.scss */
+  .lift {
+    padding-bottom: 100px;
+  }
+}
+
+/* line 14, src/scss/_components/common/lift.scss */
 .lift__box {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3126,6 +3155,7 @@ picture {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
+  min-height: 100%;
   padding: 50px 45px;
   background-image: url("../img/img-black-pattern.jpg");
   background-position: center;
@@ -3134,7 +3164,30 @@ picture {
           background-size: cover;
 }
 
-/* line 16, src/scss/_components/common/lift.scss */
+@media screen and (max-width: 1279px) {
+  /* line 14, src/scss/_components/common/lift.scss */
+  .lift__box {
+    padding: 30px 15px;
+  }
+}
+
+/* line 29, src/scss/_components/common/lift.scss */
+.lift__box:hover .lift__box-link p {
+  color: #c39d48;
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+/* line 34, src/scss/_components/common/lift.scss */
+.lift__box:hover .lift__box-link hr {
+  width: 150px;
+  -webkit-transition: width 0.3s ease-in-out;
+  -o-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
+}
+
+/* line 41, src/scss/_components/common/lift.scss */
 .lift__box-wrapper {
   position: relative;
   left: -16px;
@@ -3149,7 +3202,7 @@ picture {
   width: calc(100% + 16px);
 }
 
-/* line 23, src/scss/_components/common/lift.scss */
+/* line 48, src/scss/_components/common/lift.scss */
 .lift__box-wrapper > div {
   width: 100%;
   max-width: -webkit-calc(100% / 3);
@@ -3158,14 +3211,52 @@ picture {
   padding-bottom: 16px;
 }
 
-/* line 31, src/scss/_components/common/lift.scss */
-.lift__box-title {
-  padding-bottom: 30px;
-  font-size: 30px;
-  line-height: 30px;
+@media screen and (max-width: 1023px) {
+  /* line 48, src/scss/_components/common/lift.scss */
+  .lift__box-wrapper > div {
+    max-width: -webkit-calc(100% / 2);
+    max-width: calc(100% / 2);
+  }
 }
 
-/* line 37, src/scss/_components/common/lift.scss */
+/* line 59, src/scss/_components/common/lift.scss */
+.lift__box-title {
+  padding-bottom: 30px;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+@media screen and (min-width: 320px) {
+  /* line 59, src/scss/_components/common/lift.scss */
+  .lift__box-title {
+    font-size: -webkit-calc(20px + 10 * (100vw - 320px) / 1480);
+    font-size: calc(20px + 10 * (100vw - 320px) / 1480);
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  /* line 59, src/scss/_components/common/lift.scss */
+  .lift__box-title {
+    font-size: 30px;
+  }
+}
+
+@media screen and (min-width: 320px) {
+  /* line 59, src/scss/_components/common/lift.scss */
+  .lift__box-title {
+    line-height: -webkit-calc(32px + 8 * (100vw - 320px) / 1480);
+    line-height: calc(32px + 8 * (100vw - 320px) / 1480);
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  /* line 59, src/scss/_components/common/lift.scss */
+  .lift__box-title {
+    line-height: 40px;
+  }
+}
+
+/* line 67, src/scss/_components/common/lift.scss */
 .lift__box-link {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3178,7 +3269,7 @@ picture {
           flex-direction: column;
 }
 
-/* line 41, src/scss/_components/common/lift.scss */
+/* line 71, src/scss/_components/common/lift.scss */
 .lift__box-link p {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3194,9 +3285,12 @@ picture {
   letter-spacing: 0.02em;
   line-height: 38px;
   color: #fff;
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 
-/* line 52, src/scss/_components/common/lift.scss */
+/* line 83, src/scss/_components/common/lift.scss */
 .lift__box-link hr {
   width: 99px;
   height: 2px;
@@ -3204,6 +3298,9 @@ picture {
   padding: 0;
   border: none;
   background-color: #bd9e56;
+  -webkit-transition: width 0.3s ease-in-out;
+  -o-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
 }
 
 /* line 3, src/scss/_components/common/gallery.scss */
@@ -4463,7 +4560,15 @@ picture {
           background-size: cover;
 }
 
-/* line 11, src/scss/_components/procedures/natural.scss */
+@media screen and (max-width: 1023px) {
+  /* line 3, src/scss/_components/procedures/natural.scss */
+  .natural {
+    padding-top: 150px;
+    padding-bottom: 0;
+  }
+}
+
+/* line 15, src/scss/_components/procedures/natural.scss */
 .natural__wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4475,7 +4580,20 @@ picture {
           align-items: center;
 }
 
-/* line 15, src/scss/_components/procedures/natural.scss */
+@media screen and (max-width: 1023px) {
+  /* line 15, src/scss/_components/procedures/natural.scss */
+  .natural__wrapper {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+/* line 23, src/scss/_components/procedures/natural.scss */
 .natural__wrapper-left, .natural__wrapper-right {
   z-index: 2;
   position: relative;
@@ -4483,7 +4601,42 @@ picture {
   max-width: 405px;
 }
 
-/* line 23, src/scss/_components/procedures/natural.scss */
+@media screen and (max-width: 1535px) {
+  /* line 23, src/scss/_components/procedures/natural.scss */
+  .natural__wrapper-left, .natural__wrapper-right {
+    max-width: 355px;
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  /* line 23, src/scss/_components/procedures/natural.scss */
+  .natural__wrapper-left, .natural__wrapper-right {
+    max-width: 300px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  /* line 23, src/scss/_components/procedures/natural.scss */
+  .natural__wrapper-left, .natural__wrapper-right {
+    max-width: -webkit-calc((100% - 15px) / 2);
+    max-width: calc((100% - 15px) / 2);
+    -webkit-transform: translateY(-100px);
+        -ms-transform: translateY(-100px);
+            transform: translateY(-100px);
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  /* line 41, src/scss/_components/procedures/natural.scss */
+  .natural__wrapper-left {
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
+
+/* line 47, src/scss/_components/procedures/natural.scss */
 .natural__wrapper-middle {
   position: relative;
   -webkit-box-flex: 1;
@@ -4495,7 +4648,22 @@ picture {
   padding-bottom: 155px;
 }
 
-/* line 30, src/scss/_components/procedures/natural.scss */
+@media screen and (max-width: 1023px) {
+  /* line 47, src/scss/_components/procedures/natural.scss */
+  .natural__wrapper-middle {
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1;
+    -webkit-box-flex: 100%;
+    -webkit-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
+    padding-bottom: 150px;
+  }
+}
+
+/* line 59, src/scss/_components/procedures/natural.scss */
 .natural__wrapper-middle:after {
   content: '';
   z-index: 0;
@@ -4513,13 +4681,33 @@ picture {
           background-size: cover;
 }
 
-/* line 47, src/scss/_components/procedures/natural.scss */
+@media screen and (max-width: 1023px) {
+  /* line 75, src/scss/_components/procedures/natural.scss */
+  .natural__wrapper-right {
+    -webkit-box-ordinal-group: 4;
+    -webkit-order: 3;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+}
+
+/* line 82, src/scss/_components/procedures/natural.scss */
 .natural__content {
   z-index: 2;
   position: relative;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
-/* line 52, src/scss/_components/procedures/natural.scss */
+@media screen and (max-width: 1023px) {
+  /* line 82, src/scss/_components/procedures/natural.scss */
+  .natural__content {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/* line 93, src/scss/_components/procedures/natural.scss */
 .natural__logo {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4536,7 +4724,14 @@ picture {
   padding-bottom: 50px;
 }
 
-/* line 58, src/scss/_components/procedures/natural.scss */
+@media screen and (max-width: 1799px) {
+  /* line 93, src/scss/_components/procedures/natural.scss */
+  .natural__logo {
+    padding-bottom: 30px;
+  }
+}
+
+/* line 102, src/scss/_components/procedures/natural.scss */
 .natural__logo img {
   display: block;
   -webkit-transform: translateY(-50%);
@@ -4548,7 +4743,7 @@ picture {
   margin-right: auto;
 }
 
-/* line 69, src/scss/_components/procedures/natural.scss */
+/* line 113, src/scss/_components/procedures/natural.scss */
 .natural__media img {
   display: block;
   max-width: 100%;
@@ -4559,13 +4754,13 @@ picture {
           filter: drop-shadow(15px 15px 45px rgba(0, 0, 0, 0.1));
 }
 
-/* line 79, src/scss/_components/procedures/natural.scss */
+/* line 123, src/scss/_components/procedures/natural.scss */
 .natural__label {
   color: #ffffff;
   text-align: center;
 }
 
-/* line 84, src/scss/_components/procedures/natural.scss */
+/* line 128, src/scss/_components/procedures/natural.scss */
 .natural__title {
   padding-bottom: 40px;
   text-align: center;
@@ -4574,7 +4769,7 @@ picture {
 }
 
 @media screen and (min-width: 320px) {
-  /* line 84, src/scss/_components/procedures/natural.scss */
+  /* line 128, src/scss/_components/procedures/natural.scss */
   .natural__title {
     font-size: -webkit-calc(35px + 25 * (100vw - 320px) / 1480);
     font-size: calc(35px + 25 * (100vw - 320px) / 1480);
@@ -4582,14 +4777,14 @@ picture {
 }
 
 @media screen and (min-width: 1800px) {
-  /* line 84, src/scss/_components/procedures/natural.scss */
+  /* line 128, src/scss/_components/procedures/natural.scss */
   .natural__title {
     font-size: 60px;
   }
 }
 
 @media screen and (min-width: 320px) {
-  /* line 84, src/scss/_components/procedures/natural.scss */
+  /* line 128, src/scss/_components/procedures/natural.scss */
   .natural__title {
     line-height: -webkit-calc(45px + 25 * (100vw - 320px) / 1480);
     line-height: calc(45px + 25 * (100vw - 320px) / 1480);
@@ -4597,13 +4792,13 @@ picture {
 }
 
 @media screen and (min-width: 1800px) {
-  /* line 84, src/scss/_components/procedures/natural.scss */
+  /* line 128, src/scss/_components/procedures/natural.scss */
   .natural__title {
     line-height: 70px;
   }
 }
 
-/* line 93, src/scss/_components/procedures/natural.scss */
+/* line 137, src/scss/_components/procedures/natural.scss */
 .natural__desc {
   width: 100%;
   max-width: 600px;
@@ -4625,7 +4820,15 @@ picture {
           background-size: cover;
 }
 
-/* line 12, src/scss/_components/procedures/breast.scss */
+@media screen and (max-width: 1023px) {
+  /* line 3, src/scss/_components/procedures/breast.scss */
+  .breast {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+
+/* line 16, src/scss/_components/procedures/breast.scss */
 .breast__bg {
   z-index: 0;
   position: absolute;
@@ -4640,7 +4843,16 @@ picture {
   height: calc(100% - 300px);
 }
 
-/* line 21, src/scss/_components/procedures/breast.scss */
+@media screen and (max-width: 1023px) {
+  /* line 16, src/scss/_components/procedures/breast.scss */
+  .breast__bg {
+    top: 50px;
+    height: -webkit-calc(100% - 100px);
+    height: calc(100% - 100px);
+  }
+}
+
+/* line 29, src/scss/_components/procedures/breast.scss */
 .breast__bg > div {
   position: relative;
   width: 100%;
@@ -4648,7 +4860,7 @@ picture {
   margin-left: auto;
 }
 
-/* line 33, src/scss/_components/procedures/breast.scss */
+/* line 41, src/scss/_components/procedures/breast.scss */
 .breast__wrapper {
   z-index: 2;
   position: relative;
@@ -4664,12 +4876,20 @@ picture {
   padding-bottom: 93px;
 }
 
-/* line 41, src/scss/_components/procedures/breast.scss */
+@media screen and (max-width: 1023px) {
+  /* line 41, src/scss/_components/procedures/breast.scss */
+  .breast__wrapper {
+    padding-top: 75px;
+    padding-bottom: 75px;
+  }
+}
+
+/* line 53, src/scss/_components/procedures/breast.scss */
 .breast__wrapper-left {
   width: 60%;
 }
 
-/* line 45, src/scss/_components/procedures/breast.scss */
+/* line 57, src/scss/_components/procedures/breast.scss */
 .breast__wrapper-left {
   position: relative;
   padding: 210px 50px 210px 90px;
@@ -4681,13 +4901,35 @@ picture {
           background-size: cover;
 }
 
-/* line 56, src/scss/_components/procedures/breast.scss */
+@media screen and (max-width: 1439px) {
+  /* line 57, src/scss/_components/procedures/breast.scss */
+  .breast__wrapper-left {
+    padding-left: 50px;
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  /* line 57, src/scss/_components/procedures/breast.scss */
+  .breast__wrapper-left {
+    padding: 150px 100px 150px 50px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  /* line 57, src/scss/_components/procedures/breast.scss */
+  .breast__wrapper-left {
+    padding-top: 75px;
+    padding-bottom: 75px;
+  }
+}
+
+/* line 78, src/scss/_components/procedures/breast.scss */
 .breast__label {
   color: #ffffff;
   text-align: left;
 }
 
-/* line 61, src/scss/_components/procedures/breast.scss */
+/* line 83, src/scss/_components/procedures/breast.scss */
 .breast__title {
   padding-bottom: 30px;
   font-size: 35px;
@@ -4695,7 +4937,7 @@ picture {
 }
 
 @media screen and (min-width: 320px) {
-  /* line 61, src/scss/_components/procedures/breast.scss */
+  /* line 83, src/scss/_components/procedures/breast.scss */
   .breast__title {
     font-size: -webkit-calc(35px + 25 * (100vw - 320px) / 1480);
     font-size: calc(35px + 25 * (100vw - 320px) / 1480);
@@ -4703,14 +4945,14 @@ picture {
 }
 
 @media screen and (min-width: 1800px) {
-  /* line 61, src/scss/_components/procedures/breast.scss */
+  /* line 83, src/scss/_components/procedures/breast.scss */
   .breast__title {
     font-size: 60px;
   }
 }
 
 @media screen and (min-width: 320px) {
-  /* line 61, src/scss/_components/procedures/breast.scss */
+  /* line 83, src/scss/_components/procedures/breast.scss */
   .breast__title {
     line-height: -webkit-calc(45px + 25 * (100vw - 320px) / 1480);
     line-height: calc(45px + 25 * (100vw - 320px) / 1480);
@@ -4718,20 +4960,20 @@ picture {
 }
 
 @media screen and (min-width: 1800px) {
-  /* line 61, src/scss/_components/procedures/breast.scss */
+  /* line 83, src/scss/_components/procedures/breast.scss */
   .breast__title {
     line-height: 70px;
   }
 }
 
-/* line 68, src/scss/_components/procedures/breast.scss */
+/* line 90, src/scss/_components/procedures/breast.scss */
 .breast__desc {
   width: 100%;
   max-width: 600px;
   color: #ffffff;
 }
 
-/* line 74, src/scss/_components/procedures/breast.scss */
+/* line 96, src/scss/_components/procedures/breast.scss */
 .breast__logo {
   z-index: 2;
   position: absolute;
@@ -4755,7 +4997,15 @@ picture {
           background-size: cover;
 }
 
-/* line 12, src/scss/_components/procedures/bodys.scss */
+@media screen and (max-width: 1023px) {
+  /* line 3, src/scss/_components/procedures/bodys.scss */
+  .bodys {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+
+/* line 16, src/scss/_components/procedures/bodys.scss */
 .bodys__bg {
   z-index: 0;
   position: absolute;
@@ -4770,14 +5020,23 @@ picture {
   height: calc(100% - 300px);
 }
 
-/* line 21, src/scss/_components/procedures/bodys.scss */
+@media screen and (max-width: 1023px) {
+  /* line 16, src/scss/_components/procedures/bodys.scss */
+  .bodys__bg {
+    top: 50px;
+    height: -webkit-calc(100% - 100px);
+    height: calc(100% - 100px);
+  }
+}
+
+/* line 29, src/scss/_components/procedures/bodys.scss */
 .bodys__bg > div {
   position: relative;
   width: 100%;
   max-width: 60%;
 }
 
-/* line 32, src/scss/_components/procedures/bodys.scss */
+/* line 40, src/scss/_components/procedures/bodys.scss */
 .bodys__wrapper {
   z-index: 2;
   position: relative;
@@ -4793,13 +5052,28 @@ picture {
   padding-bottom: 93px;
 }
 
-/* line 40, src/scss/_components/procedures/bodys.scss */
+@media screen and (max-width: 1023px) {
+  /* line 40, src/scss/_components/procedures/bodys.scss */
+  .bodys__wrapper {
+    padding-top: 75px;
+    padding-bottom: 75px;
+  }
+}
+
+/* line 52, src/scss/_components/procedures/bodys.scss */
 .bodys__wrapper-left {
   width: 60%;
   margin-left: auto;
 }
 
-/* line 45, src/scss/_components/procedures/bodys.scss */
+@media screen and (max-width: 1023px) {
+  /* line 52, src/scss/_components/procedures/bodys.scss */
+  .bodys__wrapper-left {
+    width: 75%;
+  }
+}
+
+/* line 60, src/scss/_components/procedures/bodys.scss */
 .bodys__wrapper-left {
   position: relative;
   padding: 210px 50px 210px 90px;
@@ -4811,13 +5085,28 @@ picture {
           background-size: cover;
 }
 
-/* line 56, src/scss/_components/procedures/bodys.scss */
+@media screen and (max-width: 1279px) {
+  /* line 60, src/scss/_components/procedures/bodys.scss */
+  .bodys__wrapper-left {
+    padding: 150px 50px 150px 100px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  /* line 60, src/scss/_components/procedures/bodys.scss */
+  .bodys__wrapper-left {
+    padding-top: 75px;
+    padding-bottom: 75px;
+  }
+}
+
+/* line 78, src/scss/_components/procedures/bodys.scss */
 .bodys__label {
   color: #ffffff;
   text-align: left;
 }
 
-/* line 61, src/scss/_components/procedures/bodys.scss */
+/* line 83, src/scss/_components/procedures/bodys.scss */
 .bodys__title {
   padding-bottom: 30px;
   font-size: 35px;
@@ -4825,7 +5114,7 @@ picture {
 }
 
 @media screen and (min-width: 320px) {
-  /* line 61, src/scss/_components/procedures/bodys.scss */
+  /* line 83, src/scss/_components/procedures/bodys.scss */
   .bodys__title {
     font-size: -webkit-calc(35px + 25 * (100vw - 320px) / 1480);
     font-size: calc(35px + 25 * (100vw - 320px) / 1480);
@@ -4833,14 +5122,14 @@ picture {
 }
 
 @media screen and (min-width: 1800px) {
-  /* line 61, src/scss/_components/procedures/bodys.scss */
+  /* line 83, src/scss/_components/procedures/bodys.scss */
   .bodys__title {
     font-size: 60px;
   }
 }
 
 @media screen and (min-width: 320px) {
-  /* line 61, src/scss/_components/procedures/bodys.scss */
+  /* line 83, src/scss/_components/procedures/bodys.scss */
   .bodys__title {
     line-height: -webkit-calc(45px + 25 * (100vw - 320px) / 1480);
     line-height: calc(45px + 25 * (100vw - 320px) / 1480);
@@ -4848,20 +5137,20 @@ picture {
 }
 
 @media screen and (min-width: 1800px) {
-  /* line 61, src/scss/_components/procedures/bodys.scss */
+  /* line 83, src/scss/_components/procedures/bodys.scss */
   .bodys__title {
     line-height: 70px;
   }
 }
 
-/* line 68, src/scss/_components/procedures/bodys.scss */
+/* line 90, src/scss/_components/procedures/bodys.scss */
 .bodys__desc {
   width: 100%;
   max-width: 600px;
   color: #ffffff;
 }
 
-/* line 74, src/scss/_components/procedures/bodys.scss */
+/* line 96, src/scss/_components/procedures/bodys.scss */
 .bodys__logo {
   z-index: 2;
   position: absolute;
@@ -4879,7 +5168,15 @@ picture {
   padding-bottom: 150px;
 }
 
-/* line 7, src/scss/_components/gallery/imagine.scss */
+@media screen and (max-width: 1279px) {
+  /* line 3, src/scss/_components/gallery/imagine.scss */
+  .imagine {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+
+/* line 11, src/scss/_components/gallery/imagine.scss */
 .imagine__wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4895,7 +5192,37 @@ picture {
   margin-right: auto;
 }
 
-/* line 17, src/scss/_components/gallery/imagine.scss */
+@media screen and (max-width: 1279px) {
+  /* line 11, src/scss/_components/gallery/imagine.scss */
+  .imagine__wrapper {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  /* line 23, src/scss/_components/gallery/imagine.scss */
+  .imagine__wrapper-left, .imagine__wrapper-right {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    max-width: -webkit-calc((100% - 15px) / 2);
+    max-width: calc((100% - 15px) / 2);
+  }
+}
+
+/* line 32, src/scss/_components/gallery/imagine.scss */
 .imagine__wrapper-left img, .imagine__wrapper-right img {
   display: block;
   max-width: 100%;
@@ -4906,7 +5233,18 @@ picture {
           filter: drop-shadow(15px 15px 45px rgba(0, 0, 0, 0.1));
 }
 
-/* line 27, src/scss/_components/gallery/imagine.scss */
+@media screen and (max-width: 1279px) {
+  /* line 42, src/scss/_components/gallery/imagine.scss */
+  .imagine__wrapper-left {
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+        -ms-flex-order: 2;
+            order: 2;
+    padding-left: 15px;
+  }
+}
+
+/* line 49, src/scss/_components/gallery/imagine.scss */
 .imagine__wrapper-middle {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -4918,14 +5256,73 @@ picture {
   padding-right: 50px;
 }
 
-/* line 36, src/scss/_components/gallery/imagine.scss */
+@media screen and (max-width: 1279px) {
+  /* line 49, src/scss/_components/gallery/imagine.scss */
+  .imagine__wrapper-middle {
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1;
+    -webkit-box-flex: 100%;
+    -webkit-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  /* line 64, src/scss/_components/gallery/imagine.scss */
+  .imagine__wrapper-right {
+    -webkit-box-ordinal-group: 4;
+    -webkit-order: 3;
+        -ms-flex-order: 3;
+            order: 3;
+    padding-right: 15px;
+  }
+}
+
+/* line 72, src/scss/_components/gallery/imagine.scss */
 .imagine__title {
   padding-bottom: 60px;
   text-align: center;
-  font-size: 80px;
+  font-size: 35px;
+  line-height: 45px;
 }
 
-/* line 42, src/scss/_components/gallery/imagine.scss */
+@media screen and (min-width: 320px) {
+  /* line 72, src/scss/_components/gallery/imagine.scss */
+  .imagine__title {
+    font-size: -webkit-calc(35px + 45 * (100vw - 320px) / 1480);
+    font-size: calc(35px + 45 * (100vw - 320px) / 1480);
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  /* line 72, src/scss/_components/gallery/imagine.scss */
+  .imagine__title {
+    font-size: 80px;
+  }
+}
+
+@media screen and (min-width: 320px) {
+  /* line 72, src/scss/_components/gallery/imagine.scss */
+  .imagine__title {
+    line-height: -webkit-calc(45px + 45 * (100vw - 320px) / 1480);
+    line-height: calc(45px + 45 * (100vw - 320px) / 1480);
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  /* line 72, src/scss/_components/gallery/imagine.scss */
+  .imagine__title {
+    line-height: 90px;
+  }
+}
+
+/* line 80, src/scss/_components/gallery/imagine.scss */
 .imagine__desc {
   width: 100%;
   max-width: 812px;
@@ -4939,7 +5336,14 @@ picture {
   padding-bottom: 200px;
 }
 
-/* line 8, src/scss/_components/gallery/beforeAfter.scss */
+@media screen and (max-width: 1535px) {
+  /* line 4, src/scss/_components/gallery/beforeAfter.scss */
+  .beforeAfter__wrapper {
+    padding-bottom: 150px;
+  }
+}
+
+/* line 11, src/scss/_components/gallery/beforeAfter.scss */
 .beforeAfter__heading {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4953,19 +5357,19 @@ picture {
   padding-bottom: 55px;
 }
 
-/* line 14, src/scss/_components/gallery/beforeAfter.scss */
+/* line 17, src/scss/_components/gallery/beforeAfter.scss */
 .beforeAfter__label {
   text-align: left;
 }
 
-/* line 18, src/scss/_components/gallery/beforeAfter.scss */
+/* line 21, src/scss/_components/gallery/beforeAfter.scss */
 .beforeAfter__title {
   font-size: 45px;
   line-height: 45px;
 }
 
 @media screen and (min-width: 320px) {
-  /* line 18, src/scss/_components/gallery/beforeAfter.scss */
+  /* line 21, src/scss/_components/gallery/beforeAfter.scss */
   .beforeAfter__title {
     font-size: -webkit-calc(45px + 45 * (100vw - 320px) / 1480);
     font-size: calc(45px + 45 * (100vw - 320px) / 1480);
@@ -4973,14 +5377,14 @@ picture {
 }
 
 @media screen and (min-width: 1800px) {
-  /* line 18, src/scss/_components/gallery/beforeAfter.scss */
+  /* line 21, src/scss/_components/gallery/beforeAfter.scss */
   .beforeAfter__title {
     font-size: 90px;
   }
 }
 
 @media screen and (min-width: 320px) {
-  /* line 18, src/scss/_components/gallery/beforeAfter.scss */
+  /* line 21, src/scss/_components/gallery/beforeAfter.scss */
   .beforeAfter__title {
     line-height: -webkit-calc(45px + 45 * (100vw - 320px) / 1480);
     line-height: calc(45px + 45 * (100vw - 320px) / 1480);
@@ -4988,19 +5392,40 @@ picture {
 }
 
 @media screen and (min-width: 1800px) {
-  /* line 18, src/scss/_components/gallery/beforeAfter.scss */
+  /* line 21, src/scss/_components/gallery/beforeAfter.scss */
   .beforeAfter__title {
     line-height: 90px;
   }
 }
 
-/* line 27, src/scss/_components/gallery/beforeAfter.scss */
+/* line 30, src/scss/_components/gallery/beforeAfter.scss */
 .beforeAfter__slider .swiper-slide {
   position: relative;
   width: 535px !important;
 }
 
-/* line 31, src/scss/_components/gallery/beforeAfter.scss */
+@media screen and (max-width: 1535px) {
+  /* line 30, src/scss/_components/gallery/beforeAfter.scss */
+  .beforeAfter__slider .swiper-slide {
+    width: 500px !important;
+  }
+}
+
+@media screen and (max-width: 1365px) {
+  /* line 30, src/scss/_components/gallery/beforeAfter.scss */
+  .beforeAfter__slider .swiper-slide {
+    width: 400px !important;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  /* line 30, src/scss/_components/gallery/beforeAfter.scss */
+  .beforeAfter__slider .swiper-slide {
+    width: 300px !important;
+  }
+}
+
+/* line 43, src/scss/_components/gallery/beforeAfter.scss */
 .beforeAfter__slider .swiper-slide img {
   display: block;
   max-width: 100%;
@@ -5008,16 +5433,55 @@ picture {
   max-height: 100%;
 }
 
-/* line 38, src/scss/_components/gallery/beforeAfter.scss */
+/* line 50, src/scss/_components/gallery/beforeAfter.scss */
 .beforeAfter__slider .swiper-slide p {
   z-index: 5;
   position: absolute;
   left: 57px;
   bottom: 57px;
-  font-size: 40px;
+  font-size: 25px;
+  line-height: 35px;
 }
 
-/* line 46, src/scss/_components/gallery/beforeAfter.scss */
+@media screen and (min-width: 320px) {
+  /* line 50, src/scss/_components/gallery/beforeAfter.scss */
+  .beforeAfter__slider .swiper-slide p {
+    font-size: -webkit-calc(25px + 15 * (100vw - 320px) / 1480);
+    font-size: calc(25px + 15 * (100vw - 320px) / 1480);
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  /* line 50, src/scss/_components/gallery/beforeAfter.scss */
+  .beforeAfter__slider .swiper-slide p {
+    font-size: 40px;
+  }
+}
+
+@media screen and (min-width: 320px) {
+  /* line 50, src/scss/_components/gallery/beforeAfter.scss */
+  .beforeAfter__slider .swiper-slide p {
+    line-height: -webkit-calc(35px + 15 * (100vw - 320px) / 1480);
+    line-height: calc(35px + 15 * (100vw - 320px) / 1480);
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  /* line 50, src/scss/_components/gallery/beforeAfter.scss */
+  .beforeAfter__slider .swiper-slide p {
+    line-height: 50px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  /* line 50, src/scss/_components/gallery/beforeAfter.scss */
+  .beforeAfter__slider .swiper-slide p {
+    left: 15px;
+    bottom: 15px;
+  }
+}
+
+/* line 64, src/scss/_components/gallery/beforeAfter.scss */
 .beforeAfter__slider .swiper-slide:after {
   content: '';
   z-index: 0;
@@ -5035,12 +5499,27 @@ picture {
   padding-bottom: 155px;
 }
 
-/* line 8, src/scss/_components/resources/resources.scss */
+@media screen and (max-width: 1365px) {
+  /* line 3, src/scss/_components/resources/resources.scss */
+  .resources {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+
+/* line 12, src/scss/_components/resources/resources.scss */
 .resources__wrapper-1 {
   padding-bottom: 120px;
 }
 
-/* line 15, src/scss/_components/resources/resources.scss */
+@media screen and (max-width: 1365px) {
+  /* line 12, src/scss/_components/resources/resources.scss */
+  .resources__wrapper-1 {
+    padding-bottom: 100px;
+  }
+}
+
+/* line 22, src/scss/_components/resources/resources.scss */
 .resources__title {
   padding-bottom: 60px;
   text-align: center;
@@ -5049,7 +5528,7 @@ picture {
 }
 
 @media screen and (min-width: 320px) {
-  /* line 15, src/scss/_components/resources/resources.scss */
+  /* line 22, src/scss/_components/resources/resources.scss */
   .resources__title {
     font-size: -webkit-calc(35px + 25 * (100vw - 320px) / 1480);
     font-size: calc(35px + 25 * (100vw - 320px) / 1480);
@@ -5057,14 +5536,14 @@ picture {
 }
 
 @media screen and (min-width: 1800px) {
-  /* line 15, src/scss/_components/resources/resources.scss */
+  /* line 22, src/scss/_components/resources/resources.scss */
   .resources__title {
     font-size: 60px;
   }
 }
 
 @media screen and (min-width: 320px) {
-  /* line 15, src/scss/_components/resources/resources.scss */
+  /* line 22, src/scss/_components/resources/resources.scss */
   .resources__title {
     line-height: -webkit-calc(45px + 25 * (100vw - 320px) / 1480);
     line-height: calc(45px + 25 * (100vw - 320px) / 1480);
@@ -5072,13 +5551,13 @@ picture {
 }
 
 @media screen and (min-width: 1800px) {
-  /* line 15, src/scss/_components/resources/resources.scss */
+  /* line 22, src/scss/_components/resources/resources.scss */
   .resources__title {
     line-height: 70px;
   }
 }
 
-/* line 23, src/scss/_components/resources/resources.scss */
+/* line 30, src/scss/_components/resources/resources.scss */
 .resources__desc {
   width: 100%;
   max-width: 675px;
@@ -5088,7 +5567,14 @@ picture {
   text-align: center;
 }
 
-/* line 32, src/scss/_components/resources/resources.scss */
+@media screen and (max-width: 1365px) {
+  /* line 30, src/scss/_components/resources/resources.scss */
+  .resources__desc {
+    padding-bottom: 75px;
+  }
+}
+
+/* line 42, src/scss/_components/resources/resources.scss */
 .resources__box {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5109,7 +5595,23 @@ picture {
           background-size: cover;
 }
 
-/* line 43, src/scss/_components/resources/resources.scss */
+/* line 54, src/scss/_components/resources/resources.scss */
+.resources__box:hover span {
+  color: #c39d48;
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+/* line 59, src/scss/_components/resources/resources.scss */
+.resources__box:hover hr {
+  width: 150px;
+  -webkit-transition: width 0.3s ease-in-out;
+  -o-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
+}
+
+/* line 65, src/scss/_components/resources/resources.scss */
 .resources__box-wrapper {
   position: relative;
   left: -16px;
@@ -5124,7 +5626,7 @@ picture {
   width: calc(100% + 16px);
 }
 
-/* line 50, src/scss/_components/resources/resources.scss */
+/* line 72, src/scss/_components/resources/resources.scss */
 .resources__box-wrapper > div {
   width: 100%;
   max-width: -webkit-calc(100% / 3);
@@ -5133,14 +5635,52 @@ picture {
   padding-bottom: 16px;
 }
 
-/* line 58, src/scss/_components/resources/resources.scss */
-.resources__box p {
-  padding-bottom: 40px;
-  font-size: 30px;
-  line-height: 30px;
+@media screen and (max-width: 1023px) {
+  /* line 72, src/scss/_components/resources/resources.scss */
+  .resources__box-wrapper > div {
+    max-width: -webkit-calc((100% - 16px) / 2);
+    max-width: calc((100% - 16px) / 2);
+  }
 }
 
-/* line 64, src/scss/_components/resources/resources.scss */
+/* line 83, src/scss/_components/resources/resources.scss */
+.resources__box p {
+  padding-bottom: 40px;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+@media screen and (min-width: 320px) {
+  /* line 83, src/scss/_components/resources/resources.scss */
+  .resources__box p {
+    font-size: -webkit-calc(20px + 10 * (100vw - 320px) / 1480);
+    font-size: calc(20px + 10 * (100vw - 320px) / 1480);
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  /* line 83, src/scss/_components/resources/resources.scss */
+  .resources__box p {
+    font-size: 30px;
+  }
+}
+
+@media screen and (min-width: 320px) {
+  /* line 83, src/scss/_components/resources/resources.scss */
+  .resources__box p {
+    line-height: -webkit-calc(32px + 8 * (100vw - 320px) / 1480);
+    line-height: calc(32px + 8 * (100vw - 320px) / 1480);
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  /* line 83, src/scss/_components/resources/resources.scss */
+  .resources__box p {
+    line-height: 40px;
+  }
+}
+
+/* line 91, src/scss/_components/resources/resources.scss */
 .resources__box span {
   display: block;
   padding-bottom: 20px;
@@ -5151,9 +5691,12 @@ picture {
   text-align: left;
   color: #fff;
   text-transform: uppercase;
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 
-/* line 76, src/scss/_components/resources/resources.scss */
+/* line 104, src/scss/_components/resources/resources.scss */
 .resources__box hr {
   width: 99px;
   height: 2px;
@@ -5163,9 +5706,12 @@ picture {
   -webkit-box-shadow: none;
           box-shadow: none;
   background-color: #c39d48;
+  -webkit-transition: width 0.3s ease-in-out;
+  -o-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
 }
 
-/* line 87, src/scss/_components/resources/resources.scss */
+/* line 116, src/scss/_components/resources/resources.scss */
 .resources__social {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5195,7 +5741,15 @@ picture {
           background-size: cover;
 }
 
-/* line 101, src/scss/_components/resources/resources.scss */
+@media screen and (max-width: 1279px) {
+  /* line 116, src/scss/_components/resources/resources.scss */
+  .resources__social {
+    min-height: unset;
+    padding: 40px 20px;
+  }
+}
+
+/* line 134, src/scss/_components/resources/resources.scss */
 .resources__social-wrapper {
   position: relative;
   left: -16px;
@@ -5210,7 +5764,7 @@ picture {
   width: calc(100% + 16px);
 }
 
-/* line 108, src/scss/_components/resources/resources.scss */
+/* line 141, src/scss/_components/resources/resources.scss */
 .resources__social-wrapper > div {
   width: 100%;
   max-width: -webkit-calc(100% / 4);
@@ -5219,7 +5773,15 @@ picture {
   padding-bottom: 16px;
 }
 
-/* line 116, src/scss/_components/resources/resources.scss */
+@media screen and (max-width: 1023px) {
+  /* line 141, src/scss/_components/resources/resources.scss */
+  .resources__social-wrapper > div {
+    max-width: -webkit-calc((100% - 16px) / 2);
+    max-width: calc((100% - 16px) / 2);
+  }
+}
+
+/* line 152, src/scss/_components/resources/resources.scss */
 .resources__social .icon-font {
   height: 50px;
   margin-bottom: 35px;
@@ -5227,21 +5789,58 @@ picture {
   color: #c39d48;
 }
 
-/* line 122, src/scss/_components/resources/resources.scss */
+@media screen and (max-width: 1279px) {
+  /* line 152, src/scss/_components/resources/resources.scss */
+  .resources__social .icon-font {
+    font-size: 40px !important;
+  }
+}
+
+/* line 161, src/scss/_components/resources/resources.scss */
 .resources__social .icon-font.icon-realself {
   font-size: 38px;
 }
 
-/* line 125, src/scss/_components/resources/resources.scss */
+/* line 164, src/scss/_components/resources/resources.scss */
 .resources__social .icon-font.icon-google {
   font-size: 48px;
 }
 
-/* line 130, src/scss/_components/resources/resources.scss */
+/* line 169, src/scss/_components/resources/resources.scss */
 .resources__social p {
-  font-size: 30px;
-  line-height: 30px;
   text-align: center;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+@media screen and (min-width: 320px) {
+  /* line 169, src/scss/_components/resources/resources.scss */
+  .resources__social p {
+    font-size: -webkit-calc(20px + 10 * (100vw - 320px) / 1480);
+    font-size: calc(20px + 10 * (100vw - 320px) / 1480);
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  /* line 169, src/scss/_components/resources/resources.scss */
+  .resources__social p {
+    font-size: 30px;
+  }
+}
+
+@media screen and (min-width: 320px) {
+  /* line 169, src/scss/_components/resources/resources.scss */
+  .resources__social p {
+    line-height: -webkit-calc(32px + 8 * (100vw - 320px) / 1480);
+    line-height: calc(32px + 8 * (100vw - 320px) / 1480);
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  /* line 169, src/scss/_components/resources/resources.scss */
+  .resources__social p {
+    line-height: 40px;
+  }
 }
 
 /* line 3, src/scss/_components/contact/contact.scss */
@@ -5249,7 +5848,14 @@ picture {
   padding-top: 135px;
 }
 
-/* line 6, src/scss/_components/contact/contact.scss */
+@media screen and (max-width: 1535px) {
+  /* line 3, src/scss/_components/contact/contact.scss */
+  .contact {
+    padding-top: 100px;
+  }
+}
+
+/* line 9, src/scss/_components/contact/contact.scss */
 .contact__title {
   padding-bottom: 40px;
   text-align: center;
@@ -5258,7 +5864,7 @@ picture {
 }
 
 @media screen and (min-width: 320px) {
-  /* line 6, src/scss/_components/contact/contact.scss */
+  /* line 9, src/scss/_components/contact/contact.scss */
   .contact__title {
     font-size: -webkit-calc(35px + 25 * (100vw - 320px) / 1480);
     font-size: calc(35px + 25 * (100vw - 320px) / 1480);
@@ -5266,14 +5872,14 @@ picture {
 }
 
 @media screen and (min-width: 1800px) {
-  /* line 6, src/scss/_components/contact/contact.scss */
+  /* line 9, src/scss/_components/contact/contact.scss */
   .contact__title {
     font-size: 60px;
   }
 }
 
 @media screen and (min-width: 320px) {
-  /* line 6, src/scss/_components/contact/contact.scss */
+  /* line 9, src/scss/_components/contact/contact.scss */
   .contact__title {
     line-height: -webkit-calc(45px + 25 * (100vw - 320px) / 1480);
     line-height: calc(45px + 25 * (100vw - 320px) / 1480);
@@ -5281,13 +5887,13 @@ picture {
 }
 
 @media screen and (min-width: 1800px) {
-  /* line 6, src/scss/_components/contact/contact.scss */
+  /* line 9, src/scss/_components/contact/contact.scss */
   .contact__title {
     line-height: 70px;
   }
 }
 
-/* line 15, src/scss/_components/contact/contact.scss */
+/* line 18, src/scss/_components/contact/contact.scss */
 .contact__desc {
   width: 100%;
   max-width: 930px;
@@ -5297,7 +5903,14 @@ picture {
   text-align: center;
 }
 
-/* line 24, src/scss/_components/contact/contact.scss */
+@media screen and (max-width: 1535px) {
+  /* line 18, src/scss/_components/contact/contact.scss */
+  .contact__desc {
+    padding-bottom: 100px;
+  }
+}
+
+/* line 30, src/scss/_components/contact/contact.scss */
 .contact__form {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5315,7 +5928,7 @@ picture {
   padding-bottom: 100px;
 }
 
-/* line 33, src/scss/_components/contact/contact.scss */
+/* line 39, src/scss/_components/contact/contact.scss */
 .contact__form-group {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5331,20 +5944,20 @@ picture {
           justify-content: space-between;
 }
 
-/* line 38, src/scss/_components/contact/contact.scss */
+/* line 44, src/scss/_components/contact/contact.scss */
 .contact__form-group > div {
   width: 100%;
   max-width: -webkit-calc((100% - 16px) / 2);
   max-width: calc((100% - 16px) / 2);
 }
 
-/* line 44, src/scss/_components/contact/contact.scss */
+/* line 50, src/scss/_components/contact/contact.scss */
 .contact__form-field {
   position: relative;
   padding-bottom: 25px;
 }
 
-/* line 48, src/scss/_components/contact/contact.scss */
+/* line 54, src/scss/_components/contact/contact.scss */
 .contact__form-field--btn {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5361,7 +5974,7 @@ picture {
   padding-top: 35px;
 }
 
-/* line 55, src/scss/_components/contact/contact.scss */
+/* line 61, src/scss/_components/contact/contact.scss */
 .contact__form-field label {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5370,7 +5983,7 @@ picture {
   width: 100%;
 }
 
-/* line 60, src/scss/_components/contact/contact.scss */
+/* line 66, src/scss/_components/contact/contact.scss */
 .contact__form-field input,
 .contact__form-field select,
 .contact__form-field textarea {
@@ -5439,13 +6052,13 @@ picture {
   color: #adadad;
 }
 
-/* line 83, src/scss/_components/contact/contact.scss */
+/* line 89, src/scss/_components/contact/contact.scss */
 .contact__form-field textarea {
   height: 250px;
   padding: 30px;
 }
 
-/* line 88, src/scss/_components/contact/contact.scss */
+/* line 94, src/scss/_components/contact/contact.scss */
 .contact__form-field button {
   outline: none;
   position: relative;
@@ -5470,23 +6083,45 @@ picture {
   background-color: transparent;
 }
 
-/* line 102, src/scss/_components/contact/contact.scss */
+/* line 109, src/scss/_components/contact/contact.scss */
+.contact__form-field button:hover span {
+  color: #c39d48;
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+/* line 113, src/scss/_components/contact/contact.scss */
+.contact__form-field button:hover i {
+  width: 50px;
+  -webkit-transition: width 0.3s ease-in-out;
+  -o-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
+}
+
+/* line 119, src/scss/_components/contact/contact.scss */
 .contact__form-field button span {
   padding-bottom: 20px;
   font-weight: 900;
   font-size: 18px;
   letter-spacing: 0.02em;
   color: #000;
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 
-/* line 110, src/scss/_components/contact/contact.scss */
+/* line 128, src/scss/_components/contact/contact.scss */
 .contact__form-field button i {
   width: 99px;
   height: 2px;
   background-color: #c39d48;
+  -webkit-transition: width 0.3s ease-in-out;
+  -o-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
 }
 
-/* line 120, src/scss/_components/contact/contact.scss */
+/* line 139, src/scss/_components/contact/contact.scss */
 .contact__img img {
   display: block;
   max-width: 100%;
@@ -5495,7 +6130,7 @@ picture {
   margin-right: auto;
 }
 
-/* line 129, src/scss/_components/contact/contact.scss */
+/* line 148, src/scss/_components/contact/contact.scss */
 .contact__block {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5524,14 +6159,53 @@ picture {
           background-size: cover;
 }
 
-/* line 146, src/scss/_components/contact/contact.scss */
-.contact__block-title {
-  padding-bottom: 30px;
-  line-height: 60px;
-  font-size: 60px;
+@media screen and (max-width: 1279px) {
+  /* line 148, src/scss/_components/contact/contact.scss */
+  .contact__block {
+    min-height: unset;
+    padding: 40px;
+    border-width: 5px;
+  }
 }
 
-/* line 152, src/scss/_components/contact/contact.scss */
+/* line 170, src/scss/_components/contact/contact.scss */
+.contact__block-title {
+  padding-bottom: 30px;
+  font-size: 35px;
+  line-height: 45px;
+}
+
+@media screen and (min-width: 320px) {
+  /* line 170, src/scss/_components/contact/contact.scss */
+  .contact__block-title {
+    font-size: -webkit-calc(35px + 25 * (100vw - 320px) / 1480);
+    font-size: calc(35px + 25 * (100vw - 320px) / 1480);
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  /* line 170, src/scss/_components/contact/contact.scss */
+  .contact__block-title {
+    font-size: 60px;
+  }
+}
+
+@media screen and (min-width: 320px) {
+  /* line 170, src/scss/_components/contact/contact.scss */
+  .contact__block-title {
+    line-height: -webkit-calc(45px + 25 * (100vw - 320px) / 1480);
+    line-height: calc(45px + 25 * (100vw - 320px) / 1480);
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  /* line 170, src/scss/_components/contact/contact.scss */
+  .contact__block-title {
+    line-height: 70px;
+  }
+}
+
+/* line 178, src/scss/_components/contact/contact.scss */
 .contact__block-header {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5543,14 +6217,14 @@ picture {
           justify-content: space-between;
 }
 
-/* line 157, src/scss/_components/contact/contact.scss */
+/* line 183, src/scss/_components/contact/contact.scss */
 .contact__block-desc {
   font-size: 20px;
   line-height: 30px;
   color: #fff;
 }
 
-/* line 163, src/scss/_components/contact/contact.scss */
+/* line 189, src/scss/_components/contact/contact.scss */
 .contact__block-link {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5564,7 +6238,7 @@ picture {
   color: #fff;
 }
 
-/* line 173, src/scss/_components/contact/contact.scss */
+/* line 199, src/scss/_components/contact/contact.scss */
 .contact__block-line {
   width: 99px;
   height: 2px;

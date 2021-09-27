@@ -36,10 +36,16 @@
 
 .resourcesPage {
 	padding-bottom: 200px;
+	@include adaptive(1365) {
+		padding-bottom: 100px;
+	}
 }
 
 .contactPage {
 	padding-bottom: 50px;
+	@include adaptive(1279) {
+		padding-bottom: 0;
+	}
 }
 
 // COMMON :: END

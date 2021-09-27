@@ -3,10 +3,17 @@
 .resources {
 	padding-top: 165px;
 	padding-bottom: 155px;
+	@include adaptive(1365) {
+		padding-top: 100px;
+		padding-bottom: 100px;
+	}
 
 	&__wrapper {
 		&-1 {
 			padding-bottom: 120px;
+			@include adaptive(1365) {
+				padding-bottom: 100px;
+			}
 		}
 
 		&-2 {}
@@ -27,6 +34,9 @@
 		margin-left: auto;
 		margin-right: auto;
 		text-align: center;
+		@include adaptive(1365) {
+			padding-bottom: 75px;
+		}
 	}
 
 	&__box {
@@ -40,6 +50,18 @@
 		background-repeat: no-repeat;
 		background-size: cover;
 
+		&:hover {
+			span {
+				color: #c39d48;
+				@include transition(color);
+			}
+
+			hr {
+				width: 150px;
+				@include transition(width);
+			}
+		}
+
 		&-wrapper {
 			position: relative;
 			left: -16px;
@@ -52,13 +74,18 @@
 				max-width: calc(100% / 3);
 				padding-left: 16px;
 				padding-bottom: 16px;
+				@include adaptive(1023) {
+					max-width: calc((100% - 16px) / 2);
+				}
 			}
 		}
 
 		p {
 			padding-bottom: 40px;
-			font-size: 30px;
-			line-height: 30px;
+			//font-size: 30px;
+			//line-height: 30px;
+			@include fluid(font-size, 320px, 1800px, 20px, 30px);
+			@include fluid(line-height, 320px, 1800px, 32px, 40px);
 		}
 
 		span {
@@ -71,6 +98,7 @@
 			text-align: left;
 			color: #fff;
 			text-transform: uppercase;
+			@include transition(color);
 		}
 
 		hr {
@@ -81,6 +109,7 @@
 			border: none;
 			box-shadow: none;
 			background-color: #c39d48;
+			@include transition(width);
 		}
 	}
 
@@ -97,6 +126,10 @@
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
+		@include adaptive(1279) {
+			min-height: unset;
+			padding: 40px 20px;
+		}
 
 		&-wrapper {
 			position: relative;
@@ -110,6 +143,9 @@
 				max-width: calc(100% / 4);
 				padding-left: 16px;
 				padding-bottom: 16px;
+				@include adaptive(1023) {
+					max-width: calc((100% - 16px) / 2);
+				}
 			}
 		}
 
@@ -118,6 +154,9 @@
 			margin-bottom: 35px;
 			font-size: 50px;
 			color: #c39d48;
+			@include adaptive(1279) {
+				font-size: 40px !important;
+			}
 
 			&.icon-realself {
 				font-size: 38px;
@@ -128,9 +167,11 @@
 		}
 
 		p {
-			font-size: 30px;
-			line-height: 30px;
+			//font-size: 30px;
+			//line-height: 30px;
 			text-align: center;
+			@include fluid(font-size, 320px, 1800px, 20px, 30px);
+			@include fluid(line-height, 320px, 1800px, 32px, 40px);
 		}
 	}
 }

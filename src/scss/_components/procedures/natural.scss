@@ -7,10 +7,18 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
+	@include adaptive(1023) {
+		padding-top: 150px;
+		padding-bottom: 0;
+	}
 
 	&__wrapper {
 		display: flex;
 		align-items: center;
+		@include adaptive(1023) {
+		  flex-wrap: wrap;
+			justify-content: space-between;
+		}
 
 		&-left,
 		&-right {
@@ -18,6 +26,22 @@
 			position: relative;
 			width: 100%;
 			max-width: 405px;
+			@include adaptive(1535) {
+				max-width: 355px;
+			}
+			@include adaptive(1279) {
+				max-width: 300px;
+			}
+			@include adaptive(1023) {
+				max-width: calc((100% - 15px) / 2);
+				transform: translateY(-100px);
+			}
+		}
+
+		&-left {
+			@include adaptive(1023) {
+				order: 2;
+			}
 		}
 
 		&-middle {
@@ -26,6 +50,11 @@
 			min-width: 1px;
 			max-width: 100%;
 			padding-bottom: 155px;
+			@include adaptive(1023) {
+				order: 1;
+				flex: 100%;
+				padding-bottom: 150px;
+			}
 
 			&:after {
 				content: '';
@@ -42,11 +71,23 @@
 				background-size: cover;
 			}
 		}
+
+		&-right {
+			@include adaptive(1023) {
+				order: 3;
+			}
+		}
 	}
 
 	&__content {
 		z-index: 2;
 		position: relative;
+		padding-left: 15px;
+		padding-right: 15px;
+		@include adaptive(1023) {
+			padding-left: 0;
+			padding-right: 0;
+		}
 	}
 
 	&__logo {
@@ -54,6 +95,9 @@
 		align-items: center;
 		justify-content: center;
 		padding-bottom: 50px;
+		@include adaptive(1799) {
+			padding-bottom: 30px;
+		}
 
 		img {
 			display: block;
