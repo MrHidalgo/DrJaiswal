@@ -4,6 +4,21 @@
 	display: flex;
 	align-items: center;
 
+	&.logo--menu {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+
+		.logo {
+			&__btn {
+				img {
+					max-width: 65px;
+				}
+			}
+		}
+	}
+
 	&.logo--header {
 		height: 100%;
 

@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /*
 *
@@ -12,6 +12,32 @@
 * ============================
 * ============================
 * */
+
+/**
+ * @name initHamburger
+ *
+ * @description Init hamburger logic with animated
+ */
+var initHamburger = function initHamburger() {
+
+  var btn = document.querySelector("[hamburger-js]"),
+      hideScrollContainer = document.querySelectorAll("html, body"),
+      mobileContainer = document.querySelector("[mobile-block-js]");
+
+  /**
+    * @description
+   */
+  btn.addEventListener("click", function (ev) {
+    var elem = ev.currentTarget;
+
+    elem.classList.toggle("is-active");
+    mobileContainer.classList.toggle("is-open");
+
+    hideScrollContainer.forEach(function (val, idx) {
+      val.classList.toggle("is-hideScroll");
+    });
+  });
+};
 
 /**
  * @name initHeaderFixed
@@ -116,7 +142,27 @@ $(window).on("scroll", function (ev) {
   /*
   * CALLBACK :: start
   * ============================================= */
+  var menuToggle = function menuToggle() {
+    $('.menu__btn').hover(function (ev) {
+      var el = $(ev.currentTarget),
+          elID = el.attr('data-id');
 
+      if ($(window).width() >= 768) {
+        $('.menu__btn').removeClass('is-hover');
+        el.addClass('is-hover');
+
+        $('.menu__content').hide();
+        $('.menu__content[data-content-id="' + elID + '"]').fadeIn(500);
+      }
+    }, function (ev) {});
+
+    $('.menu__link-wrapper').hover(function (ev) {}, function (ev) {
+      if ($(window).width() >= 768) {
+        $('.menu__btn').removeClass('is-hover');
+        $('.menu__content').hide();
+      }
+    });
+  };
   /*
   * CALLBACK :: end
   * ============================================= */
@@ -134,9 +180,11 @@ $(window).on("scroll", function (ev) {
     // lib
     initSwiper();
     initHeaderFixed();
+    initHamburger();
     // ==========================================
 
     // callback
+    menuToggle();
     // ==========================================
   };
   initNative();

@@ -27,29 +27,32 @@
 @function icon-char($filename) {
 	$char: "";
 
-	@if $filename == facebook {
+	@if $filename == corner {
 		$char: "\E001";
 	}
-	@if $filename == google {
+	@if $filename == facebook {
 		$char: "\E002";
 	}
-	@if $filename == instagram {
+	@if $filename == google {
 		$char: "\E003";
 	}
-	@if $filename == prev {
+	@if $filename == instagram {
 		$char: "\E004";
 	}
-	@if $filename == quote {
+	@if $filename == prev {
 		$char: "\E005";
 	}
-	@if $filename == realself {
+	@if $filename == quote {
 		$char: "\E006";
 	}
-	@if $filename == stars {
+	@if $filename == realself {
 		$char: "\E007";
 	}
-	@if $filename == yelp {
+	@if $filename == stars {
 		$char: "\E008";
+	}
+	@if $filename == yelp {
+		$char: "\E009";
 	}
 
 	@return $char;
@@ -66,6 +69,10 @@
 	}
 }
 
+.icon-corner {
+	@include icon(corner);
+
+}
 .icon-facebook {
 	@include icon(facebook);
 

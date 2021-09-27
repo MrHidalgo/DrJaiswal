@@ -1,7 +1,7 @@
 // HEADER :: START
 
 .header {
-	z-index: 990;
+	z-index: 9999;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -33,6 +33,11 @@
 			opacity: 1;
 			@include transition(opacity);
 		}
+	}
+
+	.is-hideScroll & {
+		background-color: transparent;
+		@include transition(background-color);
 	}
 
 	&__wrapper {
@@ -67,6 +72,7 @@
 		&-right {
 			display: flex;
 			align-items: center;
+			justify-content: flex-end;
 		}
 	}
 
@@ -75,8 +81,16 @@
 		font-size: 16px;
 		letter-spacing: 0.02em;
 		color: #fff;
+		@include transition(opacity, visibility, transform);
 		@include adaptive(1023) {
 			font-size: 14px;
+		}
+
+		.is-hideScroll & {
+			opacity: 0;
+			visibility: hidden;
+			transform: translateX(-50%);
+			@include transition(opacity, visibility, transform);
 		}
 	}
 
@@ -87,9 +101,17 @@
 		font-size: 16px;
 		letter-spacing: 0.02em;
 		color: #fff;
+		@include transition(opacity, visibility, transform);
 		@include transition(color);
 		@include adaptive(1023) {
 			font-size: 14px;
+		}
+
+		.is-hideScroll & {
+			opacity: 0;
+			visibility: hidden;
+			transform: translateX(-50%);
+			@include transition(opacity, visibility, transform);
 		}
 
 		&:hover {
@@ -100,7 +122,14 @@
 
 	.logo.logo--header {
 		opacity: 0;
-		@include transition(opacity);
+		@include transition(opacity, visibility, transform);
+
+		.is-hideScroll & {
+			opacity: 0;
+			visibility: hidden;
+			transform: translateX(-50%);
+			@include transition(opacity, visibility, transform);
+		}
 	}
 }
 
