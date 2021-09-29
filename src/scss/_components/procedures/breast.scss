@@ -12,6 +12,10 @@
 		padding-top: 100px;
 		padding-bottom: 100px;
 	}
+	@include adaptive(767) {
+		padding-top: 70px;
+		padding-bottom: 70px;
+	}
 
 	&__bg {
 		z-index: 0;
@@ -25,12 +29,19 @@
 			top: 50px;
 			height: calc(100% - 100px);
 		}
+		@include adaptive(767) {
+			top: 70px;
+			height: calc(100% - 140px);
+		}
 
 		> div {
 			position: relative;
 			width: 100%;
 			max-width: 60%;
 			margin-left: auto;
+			@include adaptive(767) {
+				max-width: 100%;
+			}
 
 			img {
 				@extend %imageResCoverAbs;
@@ -49,9 +60,16 @@
 			padding-top: 75px;
 			padding-bottom: 75px;
 		}
+		@include adaptive(767) {
+			padding-top: 70px;
+			padding-bottom: 70px;
+		}
 
 		&-left {
 			width: 60%;
+			@include adaptive(767) {
+				width: 100%;
+			}
 		}
 
 		&-left {
@@ -69,8 +87,7 @@
 				padding: 150px 100px 150px 50px;
 			}
 			@include adaptive(1023) {
-				padding-top: 75px;
-				padding-bottom: 75px;
+				padding: 70px 15px;
 			}
 		}
 	}
@@ -78,6 +95,9 @@
 	&__label {
 		color: #ffffff;
 		text-align: left;
+		@include adaptive(767) {
+			text-align: center;
+		}
 	}
 
 	&__title {
@@ -85,12 +105,20 @@
 		//font-size: 60px;
 		@include fluid(font-size, 320px, 1800px, 35px, 60px);
 		@include fluid(line-height, 320px, 1800px, 45px, 70px);
+		@include adaptive(767) {
+			padding-bottom: 35px;
+			text-align: center;
+		}
 	}
 
 	&__desc {
 		width: 100%;
 		max-width: 600px;
 		color: #ffffff;
+		@include adaptive(767) {
+			max-width: 100%;
+			text-align: center;
+		}
 	}
 
 	&__logo {
@@ -100,6 +128,9 @@
 		right: 0;
 		transform: translate(50%, -50%);
 		width: 106px;
+		@include adaptive(767) {
+			display: none;
+		}
 	}
 }
 

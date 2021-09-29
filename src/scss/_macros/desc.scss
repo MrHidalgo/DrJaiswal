@@ -6,6 +6,10 @@
 	letter-spacing: 0.02em;
 	line-height: 38px;
 	color: #000;
+	@include adaptive(767) {
+		font-size: 14px;
+		line-height: 28px;
+	}
 }
 
 // TITLE :: END

@@ -17,6 +17,9 @@
 				flex-wrap: wrap;
 				padding-bottom: 100px;
 			}
+			@include adaptive(767) {
+				padding-bottom: 70px;
+			}
 
 			.me__wrapper {
 				&-left,
@@ -34,11 +37,18 @@
 					@include adaptive(1279) {
 						flex: 100%;
 					}
+					@include adaptive(767) {
+						order: 2;
+					}
 				}
 
 				&-right {
 					@include adaptive(1279) {
 						padding-top: 50px;
+					}
+					@include adaptive(767) {
+						order: 3;
+						padding-top: 35px;
 					}
 				}
 
@@ -49,17 +59,31 @@
 						max-width: 50%;
 						padding-top: 50px;
 					}
+					@include adaptive(767) {
+						order: 1;
+						max-width: 100%;
+						padding-top: 0;
+						padding-right: 0;
+						padding-bottom: 35px;
+					}
 				}
 			}
 		}
 
 		&-2 {
 			align-items: center;
+			@include adaptive(767) {
+				flex-direction: column;
+			}
 
 			.me__wrapper {
 				&-middle {
 					padding-left: 15px;
 					padding-right: 15px;
+					@include adaptive(767) {
+						padding-top: 35px;
+						padding-bottom: 35px;
+					}
 				}
 			}
 		}

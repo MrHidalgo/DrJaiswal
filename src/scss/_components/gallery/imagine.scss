@@ -7,6 +7,10 @@
 		padding-top: 100px;
 		padding-bottom: 100px;
 	}
+	@include adaptive(767) {
+		padding-top: 70px;
+		padding-bottom: 70px;
+	}
 
 	&__wrapper {
 		display: flex;
@@ -75,6 +79,9 @@
 		//font-size: 80px;
 		@include fluid(font-size, 320px, 1800px, 35px, 80px);
 		@include fluid(line-height, 320px, 1800px, 45px, 90px);
+		@include adaptive(767) {
+			padding-bottom: 35px;
+		}
 	}
 
 	&__desc {

@@ -19,6 +19,9 @@
 			&__wrapper {
 				height: 100px;
 				@include transition(height);
+				@include adaptive(767) {
+					height: 80px;
+				}
 			}
 		}
 
@@ -49,6 +52,9 @@
 		@include adaptive(1023) {
 			height: 125px;
 		}
+		@include adaptive(767) {
+			height: 80px;
+		}
 
 		&-left,
 		&-right {
@@ -67,6 +73,10 @@
 			min-height: 100%;
 			padding-top: 25px;
 			padding-bottom: 25px;
+			@include adaptive(767) {
+				padding-top: 15px;
+				padding-bottom: 15px;
+			}
 		}
 
 		&-right {
@@ -84,6 +94,9 @@
 		@include transition(opacity, visibility, transform);
 		@include adaptive(1023) {
 			font-size: 14px;
+		}
+		@include adaptive(767) {
+			display: none;
 		}
 
 		.is-hideScroll & {
@@ -105,6 +118,9 @@
 		@include transition(color);
 		@include adaptive(1023) {
 			font-size: 14px;
+		}
+		@include adaptive(767) {
+			display: none;
 		}
 
 		.is-hideScroll & {

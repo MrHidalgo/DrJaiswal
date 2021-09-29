@@ -7,6 +7,11 @@
 	@include adaptive(1439) {
 		padding-bottom: 40px;
 	}
+	@include adaptive(767) {
+		padding-top: 70px;
+		padding-bottom: 0;
+		background-color: #000000;
+	}
 
 	&__bg {
 		z-index: 0;
@@ -20,6 +25,11 @@
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
+		@include adaptive(767) {
+			position: relative;
+			top: 0;
+			height: auto;
+		}
 
 		&-media {
 			position: absolute;
@@ -34,6 +44,12 @@
 				top: -80px;
 				height: calc(100% + 160px);
 			}
+			@include adaptive(767) {
+				position: relative;
+				top: 0;
+				width: 100%;
+				height: auto;
+			}
 
 			img {
 				@extend %imageResCoverAbs;
@@ -42,6 +58,9 @@
 				//height: auto;
 				//max-height: 100%;
 				filter: drop-shadow(-20px 20px 65px rgba(0, 0, 0, 0.25));
+				@include adaptive(767) {
+					position: relative;
+				}
 			}
 		}
 	}
@@ -53,9 +72,17 @@
 		align-items: center;
 		padding-top: 120px;
 		padding-bottom: 120px;
+		@include adaptive(767) {
+			flex-wrap: wrap;
+			padding-top: 0;
+			padding-bottom: 0;
+		}
 
 		&-left {
 			width: 40%;
+			@include adaptive(767) {
+				width: 100%;
+			}
 		}
 
 		&-right {
@@ -63,6 +90,9 @@
 			align-items: center;
 			justify-content: flex-start;
 			width: 60%;
+			@include adaptive(767) {
+				display: none;
+			}
 		}
 	}
 
@@ -72,6 +102,10 @@
 		text-align: left;
 		@include adaptive(1023) {
 			padding-top: 100px;
+		}
+		@include adaptive(767) {
+			padding-top: 0;
+			text-align: center;
 		}
 	}
 
@@ -85,6 +119,10 @@
 		@include adaptive(1023) {
 			white-space: normal;
 		}
+		@include adaptive(767) {
+			padding-bottom: 35px;
+			text-align: center;
+		}
 	}
 
 	&__desc {
@@ -92,6 +130,10 @@
 		max-width: 530px;
 		padding-bottom: 80px;
 		color: #ffffff;
+		@include adaptive(767) {
+			padding-bottom: 35px;
+			text-align: center;
+		}
 	}
 
 	&__link {
@@ -100,6 +142,10 @@
 		margin-bottom: 180px;
 		@include adaptive(1023) {
 			margin-bottom: 100px;
+		}
+		@include adaptive(767) {
+			align-items: center;
+			margin-bottom: 35px;
 		}
 
 		&:hover {
@@ -124,6 +170,11 @@
 			line-height: 38px;
 			color: #fff;
 			@include transition(color);
+			@include adaptive(767) {
+				margin-bottom: 10px;
+				font-size: 14px;
+				line-height: 30px;
+			}
 		}
 
 		hr {
@@ -136,6 +187,9 @@
 			border-radius: 0;
 			background-color: #bd9e56;
 			@include transition(width);
+			@include adaptive(767) {
+				width: 55px;
+			}
 		}
 	}
 }

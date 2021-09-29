@@ -3,7 +3,8 @@
 .main {
 	position: relative;
 
-	&.main--home {
+	&.main--home,
+	&.main--gallery {
 		.main {
 			&__bg {
 				img {
@@ -62,6 +63,9 @@
 		}
 		@include adaptive(1535) {
 			max-width: 175px;
+		}
+		@include adaptive(767) {
+			max-width: 115px;
 		}
 	}
 

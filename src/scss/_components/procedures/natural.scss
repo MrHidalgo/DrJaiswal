@@ -11,6 +11,9 @@
 		padding-top: 150px;
 		padding-bottom: 0;
 	}
+	@include adaptive(767) {
+		padding-top: 70px;
+	}
 
 	&__wrapper {
 		display: flex;
@@ -98,6 +101,9 @@
 		@include adaptive(1799) {
 			padding-bottom: 30px;
 		}
+		@include adaptive(767) {
+			padding-bottom: 35px;
+		}
 
 		img {
 			display: block;
@@ -106,6 +112,10 @@
 			height: auto;
 			margin-left: auto;
 			margin-right: auto;
+			@include adaptive(767) {
+				width: auto;
+				height: 70px;
+			}
 		}
 	}
 

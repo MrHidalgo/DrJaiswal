@@ -5,6 +5,17 @@
 	@include adaptive(1535) {
 		padding-top: 100px;
 	}
+	@include adaptive(767) {
+		padding-top: 70px;
+	}
+
+	&__wrapper {
+		&-2 {
+			@include adaptive(767) {
+				padding-bottom: 70px;
+			}
+		}
+	}
 
 	&__title {
 		padding-bottom: 40px;
@@ -13,6 +24,9 @@
 		//line-height: 60px;
 		@include fluid(font-size, 320px, 1800px, 35px, 60px);
 		@include fluid(line-height, 320px, 1800px, 45px, 70px);
+		@include adaptive(767) {
+			padding-bottom: 35px;
+		}
 	}
 
 	&__desc {
@@ -25,6 +39,9 @@
 		@include adaptive(1535) {
 			padding-bottom: 100px;
 		}
+		@include adaptive(767) {
+			padding-bottom: 70px;
+		}
 	}
 
 	&__form {
@@ -35,15 +52,24 @@
 		margin-left: auto;
 		margin-right: auto;
 		padding-bottom: 100px;
+		@include adaptive(767) {
+			padding-bottom: 45px;
+		}
 
 		&-group {
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
+			@include adaptive(767) {
+				flex-wrap: wrap;
+			}
 
 			> div {
 				width: 100%;
 				max-width: calc((100% - 16px) / 2);
+				@include adaptive(767) {
+					max-width: 100%;
+				}
 			}
 		}
 
@@ -56,6 +82,9 @@
 				align-items: center;
 				justify-content: center;
 				padding-top: 35px;
+				@include adaptive(767) {
+					padding-top: 5px;
+				}
 			}
 
 			label {
@@ -84,11 +113,23 @@
 					font-size: 21px;
 					color: #adadad;
 				}
+				@include adaptive(767) {
+					height: 65px;
+					padding: 0 20px;
+					font-size: 18px;
+					@include inputPlaceholder {
+						font-size: 18px;
+					}
+				}
 			}
 
 			textarea {
 				height: 250px;
 				padding: 30px;
+				@include adaptive(767) {
+					height: 200px;
+					padding: 20px;
+				}
 			}
 
 			button {
@@ -166,6 +207,11 @@
 			padding: 40px;
 		  border-width: 5px;
 		}
+		@include adaptive(767) {
+			transform: unset;
+			padding: 20px;
+			margin-top: 35px;
+		}
 
 		&-title {
 			padding-bottom: 30px;
@@ -184,6 +230,10 @@
 			font-size: 20px;
 			line-height: 30px;
 			color: #fff;
+			@include adaptive(767) {
+				font-size: 16px;
+				line-height: 26px;
+			}
 		}
 
 		&-link {
@@ -194,12 +244,20 @@
 			letter-spacing: 0.02em;
 			line-height: 38px;
 			color: #fff;
+			@include adaptive(767) {
+				padding-bottom: 10px;
+				font-size: 14px;
+				line-height: 30px;
+			}
 		}
 
 		&-line {
 			width: 99px;
 			height: 2px;
 			background-color: #c39d48;
+			@include adaptive(767) {
+				width: 55px;
+			}
 		}
 	}
 }

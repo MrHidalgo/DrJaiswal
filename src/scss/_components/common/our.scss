@@ -10,6 +10,10 @@
 	@include adaptive(1279) {
 		padding-top: 100px;
 	}
+	@include adaptive(767) {
+		padding-top: 70px;
+		padding-bottom: 70px;
+	}
 
 	&__bg {
 		z-index: 0;
@@ -73,6 +77,9 @@
 		//line-height: 72px;
 		@include fluid(font-size, 320px, 1800px, 35px, 60px);
 		@include fluid(line-height, 320px, 1800px, 45px, 70px);
+		@include adaptive(767) {
+			padding-bottom: 35px;
+		}
 	}
 
 	&__desc {
@@ -111,6 +118,9 @@
 				justify-content: space-between;
 				width: 100%;
 				padding-bottom: 30px;
+				@include adaptive(767) {
+					padding-bottom: 35px;
+				}
 			}
 
 			> div {
@@ -118,6 +128,16 @@
 				@include adaptive(1023) {
 					width: auto;
 					padding-right: 0;
+				}
+				@include adaptive(767) {
+					flex: 1;
+					min-width: 1px;
+					max-width: 100%;
+
+					&:nth-of-type(2) {
+						margin-left: 15px;
+						margin-right: 15px;
+					}
 				}
 			}
 		}

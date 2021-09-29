@@ -14,9 +14,16 @@
 	@include adaptive(1279) {
 		padding-bottom: 50px;
 	}
+	@include adaptive(767) {
+		padding-top: 0;
+		padding-bottom: 35px;
+	}
 
 	&__label {
 		text-align: left;
+		@include adaptive(767) {
+			text-align: center;
+		}
 	}
 
 	&__title {
@@ -25,11 +32,18 @@
 		//line-height: 90px;
 		@include fluid(font-size, 320px, 1800px, 45px, 90px);
 		@include fluid(line-height, 320px, 1800px, 45px, 90px);
+		@include adaptive(767) {
+			padding-bottom: 35px;
+			text-align: center;
+		}
 	}
 
 	&__link {
 		display: flex;
 		flex-direction: column;
+		@include adaptive(767) {
+			align-items: center;
+		}
 
 		&:hover {
 			a {
@@ -51,6 +65,11 @@
 			letter-spacing: 0.02em;
 			color: #000;
 			@include transition(color);
+			@include adaptive(767) {
+				padding-bottom: 10px;
+				font-size: 14px;
+				line-height: 30px;
+			}
 		}
 
 		hr {
@@ -60,6 +79,9 @@
 			margin: 0;
 			background-color: #bd9e56;
 			@include transition(width);
+			@include adaptive(767) {
+				width: 55px;
+			}
 		}
 	}
 
@@ -73,12 +95,18 @@
 			display: flex;
 			flex-wrap: wrap;
 			width: calc(100% + 16px);
+			@include adaptive(767) {
+				padding-bottom: 19px;
+			}
 
 			> div {
 				width: 100%;
 				max-width: calc(100% / 3);
 				padding-left: 16px;
 				padding-bottom: 16px;
+				@include adaptive(767) {
+					max-width: 100%;
+				}
 			}
 		}
 

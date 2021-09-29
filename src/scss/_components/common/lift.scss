@@ -10,6 +10,10 @@
 	@include adaptive(1023) {
 		padding-bottom: 100px;
 	}
+	@include adaptive(767) {
+		padding-top: 70px;
+		padding-bottom: 54px;
+	}
 	
 	&__box {
 		display: flex;
@@ -52,6 +56,9 @@
 				padding-bottom: 16px;
 				@include adaptive(1023) {
 					max-width: calc(100% / 2);
+				}
+				@include adaptive(767) {
+					max-width: 100%;
 				}
 			}
 		}

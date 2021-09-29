@@ -7,6 +7,10 @@
 		padding-top: 100px;
 		padding-bottom: 100px;
 	}
+	@include adaptive(767) {
+		padding-top: 70px;
+		padding-bottom: 70px;
+	}
 
 	&__wrapper {
 		&-1 {
@@ -14,9 +18,10 @@
 			@include adaptive(1365) {
 				padding-bottom: 100px;
 			}
+			@include adaptive(767) {
+				padding-bottom: 55px;
+			}
 		}
-
-		&-2 {}
 	}
 
 	&__title {
@@ -25,6 +30,9 @@
 		//font-size: 60px;
 		@include fluid(font-size, 320px, 1800px, 35px, 60px);
 		@include fluid(line-height, 320px, 1800px, 45px, 70px);
+		@include adaptive(767) {
+			padding-bottom: 35px;
+		}
 	}
 
 	&__desc {
@@ -36,6 +44,9 @@
 		text-align: center;
 		@include adaptive(1365) {
 			padding-bottom: 75px;
+		}
+		@include adaptive(767) {
+			padding-bottom: 70px;
 		}
 	}
 
@@ -49,6 +60,9 @@
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
+		@include adaptive(767) {
+			padding: 30px 15px;
+		}
 
 		&:hover {
 			span {
@@ -77,6 +91,9 @@
 				@include adaptive(1023) {
 					max-width: calc((100% - 16px) / 2);
 				}
+				@include adaptive(767) {
+					max-width: 100%;
+				}
 			}
 		}
 
@@ -86,6 +103,9 @@
 			//line-height: 30px;
 			@include fluid(font-size, 320px, 1800px, 20px, 30px);
 			@include fluid(line-height, 320px, 1800px, 32px, 40px);
+			@include adaptive(767) {
+				padding-bottom: 35px;
+			}
 		}
 
 		span {
@@ -99,6 +119,11 @@
 			color: #fff;
 			text-transform: uppercase;
 			@include transition(color);
+			@include adaptive(767) {
+				padding-bottom: 10px;
+				font-size: 13px;
+				line-height: 30px;
+			}
 		}
 
 		hr {
@@ -110,6 +135,9 @@
 			box-shadow: none;
 			background-color: #c39d48;
 			@include transition(width);
+			@include adaptive(767) {
+				width: 55px;
+			}
 		}
 	}
 
@@ -130,6 +158,9 @@
 			min-height: unset;
 			padding: 40px 20px;
 		}
+		@include adaptive(767) {
+			padding: 30px 15px;
+		}
 
 		&-wrapper {
 			position: relative;
@@ -145,6 +176,9 @@
 				padding-bottom: 16px;
 				@include adaptive(1023) {
 					max-width: calc((100% - 16px) / 2);
+				}
+				@include adaptive(767) {
+					max-width: 100%;
 				}
 			}
 		}
