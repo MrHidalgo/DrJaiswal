@@ -19,6 +19,9 @@ PageList:
 - file: body-procedures.html
   titleName: Body Procedures
   ready: 95
+- file: facelift-procedures.html
+  titleName: Facelift Procedures
+  ready: 1
 - file: gallery.html
   titleName: Gallery
   ready: 95

@@ -151,6 +151,10 @@
 		margin-right: auto;
 		text-align: center;
 		color: #fff;
+
+		& + .natural__desc {
+			padding-top: 40px;
+		}
 	}
 }
 

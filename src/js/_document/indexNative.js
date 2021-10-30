@@ -32,6 +32,21 @@
 			}
 		);
 	};
+	
+	const faqToggle = () => {
+		$('.faq__collapse-head').on('click', (ev) => {
+			const el = $(ev.currentTarget),
+				elParent = el.parent();
+			
+			if(elParent.hasClass('is-active')) {
+				elParent.removeClass('is-active');
+				elParent.find('.faq__collapse-body').slideUp(350);
+			} else {
+				elParent.addClass('is-active');
+				elParent.find('.faq__collapse-body').slideDown(350);
+			}
+		});
+	};
 	/*
 	* CALLBACK :: end
 	* ============================================= */
@@ -55,6 +70,7 @@
 
 		// callback
 		menuToggle();
+		faqToggle();
 		// ==========================================
 	};
 	initNative();

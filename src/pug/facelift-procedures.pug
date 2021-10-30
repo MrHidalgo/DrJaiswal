@@ -1,0 +1,29 @@
+---
+title: DrJaiswal | Facelift Procedures
+
+pageClassName: p-facelift-procedures
+
+headerLogo: true
+---
+extends shared/_layout
+
+block content
+  div.body(class!= pageClassName)
+
+    +mainSection('facelift-procedures', 'img-face-procedures-main-bg.jpg', 'FACELIFT', ['HOME', '|', 'PROCEDURES', '|', 'FACE', '|', 'FACELIFT'])
+
+    include components/procedures/our
+    include components/procedures/what
+    include components/procedures/ques
+    include components/procedures/type
+    include components/procedures/step
+    include components/procedures/consultation
+
+    section.faceProceduresPage
+      include components/procedures/faq
+
+      include components/common/gallery
+      include components/common/testimonials
+
+    include components/common/schedule
+    include components/common/practice

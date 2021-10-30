@@ -1,0 +1,126 @@
+// SECTION :: START
+
+.step {
+	padding-top: 110px;
+	padding-bottom: 70px;
+	background-image: url('../img/img-pattern-mepage.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	@include adaptive(1279) {
+		padding-top: 75px;
+	}
+
+	&__wrapper {
+		display: flex;
+		align-items: center;
+
+		&-1 {
+			padding-bottom: 70px;
+			@include adaptive(1279) {
+			  flex-wrap: wrap;
+				padding-bottom: 50px;
+			}
+
+			.step__wrapper {
+				&-left,
+				&-right {
+					width: 100%;
+					max-width: 406px;
+					@include adaptive(1439) {
+						max-width: 306px;
+					}
+
+					img {
+						display: block;
+						max-width: 100%;
+						height: auto;
+						border: 5px solid #fff;
+						filter: drop-shadow(15px 15px 45px rgba(0, 0, 0, 0.1));
+						@include adaptive(1279) {
+							margin-left: auto;
+							margin-right: auto;
+						}
+					}
+				}
+
+				&-left {
+					@include adaptive(1279) {
+						order: 2;
+						max-width: 50%;
+					}
+					@include adaptive(1023) {
+						padding-right: 8px;
+					}
+				}
+
+				&-middle {
+					flex: 1;
+					min-width: 1px;
+					max-width: 100%;
+					padding-left: 80px;
+					padding-right: 80px;
+					@include adaptive(1439) {
+						padding-left: 50px;
+						padding-right: 50px;
+					}
+					@include adaptive(1279) {
+						order: 1;
+						flex: 100%;
+						padding-left: 0;
+						padding-right: 0;
+						padding-bottom: 50px;
+					}
+				}
+
+				&-right {
+					@include adaptive(1279) {
+						order: 3;
+						max-width: 50%;
+					}
+					@include adaptive(1023) {
+						padding-left: 8px;
+					}
+				}
+			}
+		}
+
+		&-2 {
+			align-items: flex-start;
+			justify-content: space-between;
+			@include adaptive(1023) {
+				flex-wrap: wrap;
+			}
+			
+			.step__wrapper-left,
+			.step__wrapper-right {
+				width: 100%;
+				max-width: calc((100% - 15px) / 2);
+				@include adaptive(1023) {
+					max-width: 100%;
+				}
+			}
+
+			.step__wrapper-right {
+				@include adaptive(1023) {
+					padding-top: 30px;
+				}
+			}
+		}
+	}
+
+	&__title {
+		padding-bottom: 30px;
+		text-align: center;
+		@include fluid(font-size, 320px, 1800px, 35px, 50px);
+		@include fluid(line-height, 320px, 1800px, 45px, 70px);
+	}
+
+	&__desc {
+		& + .step__desc {
+			padding-top: 40px;
+		}
+	}
+}
+
+// SECTION :: END
