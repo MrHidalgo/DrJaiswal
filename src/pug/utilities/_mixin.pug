@@ -16,7 +16,7 @@ mixin mainSection(classMod, img, title, breadcrumbsArr)
 	main#main.main(class!="main--" + classMod)
 		.main__bg
 			img(src!="img/" + img alt="")
-		.main__wrapper
+		.main__wrapper.wow.animate__animated.animate__fadeInUp
 			if(classMod === 'home')
 				img.main__logo(src="img/logo.svg" alt="")
 			else

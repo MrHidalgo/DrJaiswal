@@ -3,31 +3,31 @@ ProjectTitle: DrJaiswal
 PageList:
 - file: index.html
   titleName: Home
-  ready: 95
+  ready: 100
 - file: about.html
   titleName: About
-  ready: 95
+  ready: 100
 - file: me.html
   titleName: Me
-  ready: 95
+  ready: 100
 - file: face-procedures.html
   titleName: Face Procedures
-  ready: 95
+  ready: 100
 - file: breast-procedures.html
   titleName: Breast Procedures
-  ready: 95
+  ready: 100
 - file: body-procedures.html
   titleName: Body Procedures
-  ready: 95
+  ready: 100
 - file: facelift-procedures.html
   titleName: Facelift Procedures
-  ready: 1
+  ready: 100
 - file: gallery.html
   titleName: Gallery
-  ready: 95
+  ready: 100
 - file: resources.html
   titleName: Resources
-  ready: 95
+  ready: 100
 - file: contact.html
   titleName: Contact
-  ready: 95
+  ready: 100

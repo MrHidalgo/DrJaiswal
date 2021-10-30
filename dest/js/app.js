@@ -20,23 +20,23 @@
  */
 var initHamburger = function initHamburger() {
 
-  var btn = document.querySelector("[hamburger-js]"),
-      hideScrollContainer = document.querySelectorAll("html, body"),
-      mobileContainer = document.querySelector("[mobile-block-js]");
+	var btn = document.querySelector("[hamburger-js]"),
+	    hideScrollContainer = document.querySelectorAll("html, body"),
+	    mobileContainer = document.querySelector("[mobile-block-js]");
 
-  /**
-    * @description
-   */
-  btn.addEventListener("click", function (ev) {
-    var elem = ev.currentTarget;
+	/**
+   * @description
+  */
+	btn.addEventListener("click", function (ev) {
+		var elem = ev.currentTarget;
 
-    elem.classList.toggle("is-active");
-    mobileContainer.classList.toggle("is-open");
+		elem.classList.toggle("is-active");
+		mobileContainer.classList.toggle("is-open");
 
-    hideScrollContainer.forEach(function (val, idx) {
-      val.classList.toggle("is-hideScroll");
-    });
-  });
+		hideScrollContainer.forEach(function (val, idx) {
+			val.classList.toggle("is-hideScroll");
+		});
+	});
 };
 
 /**
@@ -45,16 +45,16 @@ var initHamburger = function initHamburger() {
  * @description Fixing the site header in the scrolling page.
  */
 var initHeaderFixed = function initHeaderFixed() {
-  var getCurrentScroll = function getCurrentScroll() {
-    return window.pageYOffset || document.documentElement.scrollTop;
-  };
-  var shrinkHeader = 80;
+	var getCurrentScroll = function getCurrentScroll() {
+		return window.pageYOffset || document.documentElement.scrollTop;
+	};
+	var shrinkHeader = 80;
 
-  $(window).scroll(function () {
-    var scroll = getCurrentScroll();
+	$(window).scroll(function () {
+		var scroll = getCurrentScroll();
 
-    scroll >= shrinkHeader ? $('.header').addClass('is-fixed') : $('.header').removeClass('is-fixed');
-  });
+		scroll >= shrinkHeader ? $('.header').addClass('is-fixed') : $('.header').removeClass('is-fixed');
+	});
 };
 
 /**
@@ -64,16 +64,16 @@ var initHeaderFixed = function initHeaderFixed() {
  */
 var initPreventBehavior = function initPreventBehavior() {
 
-  var link = document.querySelectorAll("a");
+	var link = document.querySelectorAll("a");
 
-  link.forEach(function (val, idx) {
+	link.forEach(function (val, idx) {
 
-    val.addEventListener("click", function (e) {
-      if (val.getAttribute("href") === "#") {
-        e.preventDefault();
-      }
-    });
-  });
+		val.addEventListener("click", function (e) {
+			if (val.getAttribute("href") === "#") {
+				e.preventDefault();
+			}
+		});
+	});
 };
 
 /**
@@ -83,44 +83,44 @@ var initPreventBehavior = function initPreventBehavior() {
  */
 var initSwiper = function initSwiper() {
 
-  if ($('.beforeAfter').length) {
-    for (var i = 1; i <= $('.beforeAfter__slider').length; i++) {
-      var delay = 5000;
+	if ($('.beforeAfter').length) {
+		for (var i = 1; i <= $('.beforeAfter__slider').length; i++) {
+			var delay = 5000;
 
-      new Swiper('.beforeAfterSlider' + i, {
-        effect: 'slide',
-        speed: 1500,
-        autoplay: {
-          delay: delay + i * 1000
-        },
-        slidesPerView: 'auto',
-        spaceBetween: 15
-      });
-    }
-  }
+			new Swiper('.beforeAfterSlider' + i, {
+				effect: 'slide',
+				speed: 1500,
+				autoplay: {
+					delay: delay + i * 1000
+				},
+				slidesPerView: 'auto',
+				spaceBetween: 15
+			});
+		}
+	}
 
-  if ($('.testimonials').length) {
-    new Swiper('.testimonialsSlider', {
-      effect: 'slide',
-      speed: 1500,
-      slidesPerView: 1,
-      spaceBetween: 15,
-      autoplay: {
-        delay: 5000
-      },
-      navigation: {
-        nextEl: '.testimonials__slider-btn--next',
-        prevEl: '.testimonials__slider-btn--prev'
-      }
-    });
-  }
+	if ($('.testimonials').length) {
+		new Swiper('.testimonialsSlider', {
+			effect: 'slide',
+			speed: 1500,
+			slidesPerView: 1,
+			spaceBetween: 15,
+			autoplay: {
+				delay: 5000
+			},
+			navigation: {
+				nextEl: '.testimonials__slider-btn--next',
+				prevEl: '.testimonials__slider-btn--prev'
+			}
+		});
+	}
 };
 
 /**
  * @description Window on load.
  */
 $(window).on("load", function (ev) {
-  // initHeaderFixed();
+	// initHeaderFixed();
 });
 
 /**
@@ -132,76 +132,95 @@ $(window).on("resize", function (ev) {});
  * @description Window on scroll.
  */
 $(window).on("scroll", function (ev) {
-  // initHeaderFixed();
+	// initHeaderFixed();
 });
 
 /**
  * @description Document DOM ready.
  */
 (function () {
-  /*
-  * CALLBACK :: start
-  * ============================================= */
-  var menuToggle = function menuToggle() {
-    $('.menu__btn').hover(function (ev) {
-      var el = $(ev.currentTarget),
-          elID = el.attr('data-id');
+	/*
+ * CALLBACK :: start
+ * ============================================= */
+	var menuToggle = function menuToggle() {
+		$('.menu__btn').hover(function (ev) {
+			var el = $(ev.currentTarget),
+			    elID = el.attr('data-id');
 
-      if ($(window).width() >= 768) {
-        $('.menu__btn').removeClass('is-hover');
-        el.addClass('is-hover');
+			if ($(window).width() >= 768) {
+				$('.menu__btn').removeClass('is-hover');
+				el.addClass('is-hover');
 
-        $('.menu__content').hide();
-        $('.menu__content[data-content-id="' + elID + '"]').fadeIn(500);
-      }
-    }, function (ev) {});
+				$('.menu__content').hide();
+				$('.menu__content[data-content-id="' + elID + '"]').fadeIn(500);
+			}
+		}, function (ev) {});
 
-    $('.menu__link-wrapper').hover(function (ev) {}, function (ev) {
-      if ($(window).width() >= 768) {
-        $('.menu__btn').removeClass('is-hover');
-        $('.menu__content').hide();
-      }
-    });
-  };
+		$('.menu__link-wrapper').hover(function (ev) {}, function (ev) {
+			if ($(window).width() >= 768) {
+				$('.menu__btn').removeClass('is-hover');
+				$('.menu__content').hide();
+			}
+		});
+	};
 
-  var faqToggle = function faqToggle() {
-    $('.faq__collapse-head').on('click', function (ev) {
-      var el = $(ev.currentTarget),
-          elParent = el.parent();
+	var faqToggle = function faqToggle() {
+		$('.faq__collapse-head').on('click', function (ev) {
+			var el = $(ev.currentTarget),
+			    elParent = el.parent();
 
-      if (elParent.hasClass('is-active')) {
-        elParent.removeClass('is-active');
-        elParent.find('.faq__collapse-body').slideUp(350);
-      } else {
-        elParent.addClass('is-active');
-        elParent.find('.faq__collapse-body').slideDown(350);
-      }
-    });
-  };
-  /*
-  * CALLBACK :: end
-  * ============================================= */
+			if (elParent.hasClass('is-active')) {
+				elParent.removeClass('is-active');
+				elParent.find('.faq__collapse-body').slideUp(350);
+			} else {
+				elParent.addClass('is-active');
+				elParent.find('.faq__collapse-body').slideDown(350);
+			}
+		});
+	};
 
-  /**
-   * @name initNative
-   *
-   * @description Init all method
-   */
-  var initNative = function initNative() {
-    // default
-    initPreventBehavior();
-    // ==========================================
+	var scrollViewPortAnimation = function scrollViewPortAnimation() {
+		var wow = new WOW({
+			boxClass: 'wow', // animated element css class (default is wow)
+			animateClass: 'animated', // animation css class (default is animated)
+			offset: 50, // distance to the element when triggering the animation (default is 0)
+			mobile: true, // trigger animations on mobile devices (default is true)
+			live: true, // act on asynchronously loaded content (default is true)
+			callback: function callback(box) {
+				// the callback is fired every time an animation is started
+				// the argument that is passed in is the DOM node being animated
+			},
+			scrollContainer: null, // optional scroll container selector, otherwise use window,
+			resetAnimation: true // reset animation on end (default is true)
+		});
 
-    // lib
-    initSwiper();
-    initHeaderFixed();
-    initHamburger();
-    // ==========================================
+		wow.init();
+	};
+	/*
+ * CALLBACK :: end
+ * ============================================= */
 
-    // callback
-    menuToggle();
-    faqToggle();
-    // ==========================================
-  };
-  initNative();
+	/**
+  * @name initNative
+  *
+  * @description Init all method
+  */
+	var initNative = function initNative() {
+		// default
+		initPreventBehavior();
+		// ==========================================
+
+		// lib
+		initSwiper();
+		initHeaderFixed();
+		initHamburger();
+		// ==========================================
+
+		// callback
+		menuToggle();
+		faqToggle();
+		scrollViewPortAnimation();
+		// ==========================================
+	};
+	initNative();
 })();
